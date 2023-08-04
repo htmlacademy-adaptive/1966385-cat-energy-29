@@ -1,0 +1,83 @@
+.main-footer__logo-link {
+  background-image: url("../../img/footer/footer-logo.svg");
+  background-repeat: no-repeat;
+  display: flex;
+  width: 128px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-footer__social {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.main-footer__social-list {
+  display: flex;
+  min-width: 132px;
+  min-height: 22px;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-footer__social-item {
+  width: 28px;
+  height: 22px;
+}
+
+.main-footer__academy {
+
+
+
+  min-width: 280px;
+  min-height: 34px;
+
+}
+
+.main-footer__academy-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-footer__academy {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  min-height: 34px;
+}
+
+.main-footer__academy-link {
+  display: flex;
+  color: #444444;
+  font-family: "Lato", sans-serif, Arial;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-decoration: none;
+  align-items: center;
+
+  &:active {
+    opacity: 30%;
+  }
+
+}
+
+.main-footer__academy-logo {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  bottom: 50%;
+  transform: translate(-50%, -50%);
+  height: 27px;
+}
