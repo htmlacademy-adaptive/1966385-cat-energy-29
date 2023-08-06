@@ -48,12 +48,13 @@
   min-height: 64px;
   align-items: center;
   justify-content: center;
-  outline: 1px solid #CDCDCD;
+  outline: 1px solid #cccccc;
   border-radius: 5px;
 }
 
 .example__result-text {
   position: relative;
+  background-color: #eaeaea;
   color: #444444;
   text-align: center;
   font-family: "Lato", sans-serif, Arial;

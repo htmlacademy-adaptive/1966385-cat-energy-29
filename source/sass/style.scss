@@ -4,10 +4,24 @@
 @import "../sass/blocks/hero";
 @import "../sass/blocks/meal-plan";
 @import "./../sass/blocks/meal-works";
+
+// Fonts
 @import "../sass/common/fonts";
 @import "../sass/common/wrapper";
 @import "../sass/common/variables";
 @import "../sass/blocks/example";
 @import "../sass/blocks/cooperate";
 @import "../sass/blocks/footer";
-@import "../sass/blocks/footer";
+@import "../sass/blocks/main-form";
+
+// Inputs
+@import "../sass/common/inputs";
+
+// Buttons
+@import "../sass/common/buttons";
+
+
+
+/*Catalog*/
+@import "../sass/blocks/catalog-productions";
+@import "../sass/blocks/catalog-additional";
