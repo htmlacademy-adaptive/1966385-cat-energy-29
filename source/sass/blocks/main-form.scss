@@ -1,0 +1,109 @@
+.main-form__title {
+  color: #000000;
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  margin: 27px 0 37px 0;
+  padding: 0;
+}
+
+.main-form__program {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  margin: 0 20px 24px 20px;
+  padding: 0;
+  text-align: left;
+}
+
+.main-form__program-title {
+  border: none;
+  color: #000000;
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.main-form__radio {
+  display: flex;
+  border: none;
+  margin: 22px 20px 19px 20px;
+  padding: 0;
+}
+
+.main-form__list {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  gap: 18px;
+}
+
+.main-form__item {
+  display: flex;
+}
+
+.main-form__program-owner {
+  border: none;
+  margin: 0 20px 24px 20px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.main-form__contakt-title {
+  position: relative;
+  width: 187px;
+  margin-bottom: 35px;
+}
+
+.main-form__comments {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: 280px;
+  gap: 38px;
+}
+
+.main-form__comments-title {
+  margin-bottom: 38px;
+}
+
+.main-form__extra {
+  border: none;
+  margin: 0 0 34px 0;
+  padding: 0;
+}
+
+.main-form__extra-title {
+  margin-bottom: 36px;
+}
+
+.main-form__extra-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.main-form__description {
+  color: #000000;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}

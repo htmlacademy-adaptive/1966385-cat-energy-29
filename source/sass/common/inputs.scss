@@ -1,0 +1,122 @@
+/* input text */
+
+.main-form__input-name {
+  display: flex;
+  align-items: center;
+  color: #444444;
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  width: 280px;
+  gap: 13px;
+  min-height: 45px;
+  margin: 0;
+}
+
+.input {
+  color: #444444;
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  width: 100%;
+  margin: 0;
+  border: none;
+  outline: 1px solid #e7e7e7;
+  padding: 14px 0 13px 15px;
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/* Radio */
+.control-label {
+  color: #222222;
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.control {
+  position: relative;
+  display: block;
+  padding-left: 45px;
+  cursor: pointer;
+}
+
+/* Mark */
+.control-mark {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  outline: solid 1px #cdcdcd;
+  cursor: pointer;
+}
+
+input[type="radio"]~.control-mark {
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked~.control-mark::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  background-color: #68b738;
+  border-radius: 50%;
+}
+
+.control-mark-ckeckbox {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 26px;
+  height: 26px;
+  outline: solid 1px #cdcdcd;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked~.control-mark-ckeckbox::before {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background-image: url("../img/input/tick.svg");
+}
+
+.main-form__program-owner-input {
+  content: "";
+  background-image: url("../img/input/email.svg");
+  background-repeat: no-repeat;
+  background-position: center right 12px;
+}
+
+.main-form__comments-input {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  width: 280px;
+  min-height: 150px;
+  text-align: start;
+  padding: 14px 15px 0 14px;
+  margin-bottom: 23px;
+  vertical-align: top;
+}

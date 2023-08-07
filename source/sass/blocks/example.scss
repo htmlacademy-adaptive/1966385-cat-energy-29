@@ -1,0 +1,85 @@
+.example__title {
+  color: #000000;
+  font-family: "Oswald", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 40px;
+  margin: 0 0 40px 0;
+  padding: 0;
+  text-align: start;
+}
+
+.example__description {
+  color: #444444;
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  margin: 0 0 20px 0;
+  max-width: 280px;
+}
+
+.example__result {
+  width: 280px;
+  gap: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.example__result-weight,
+.example__result__time {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.example__result-number {
+  display: flex;
+  color: #000000;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  min-width: 124px;
+  min-height: 64px;
+  align-items: center;
+  justify-content: center;
+  outline: 1px solid #cccccc;
+  border-radius: 5px;
+}
+
+.example__result-text {
+  position: relative;
+  background-color: #eaeaea;
+  color: #444444;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  width: 77px;
+  top: -10px;
+}
+
+.example__result-expenses {
+  color: #000000;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.examle__result-slider {
+  background-image: url("../img/example/cat-fat.png"), url("../img/example/cat-thin.png");
+  width: 280px;
+  height: 256px;
+  background-repeat: no-repeat, no-repeat;
+  background-position: left, right;
+  background-color: #eaeaea, #eaeaea;
+}
