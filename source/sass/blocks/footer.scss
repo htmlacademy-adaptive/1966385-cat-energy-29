@@ -1,5 +1,5 @@
 .main-footer__logo-link {
-  background-image: url("../../img/footer/footer-logo.svg");
+  background-image: url("../img/footer/footer-logo.svg");
   background-repeat: no-repeat;
   display: flex;
   width: 128px;
@@ -34,7 +34,10 @@
 .main-footer__academy {
   min-width: 280px;
   min-height: 34px;
-
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  min-height: 34px;
 }
 
 .main-footer__academy-list {
@@ -46,17 +49,11 @@
   align-items: center;
 }
 
-.main-footer__academy {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  min-height: 34px;
-}
 
 .main-footer__academy-link {
   display: flex;
   color: #444444;
-  font-family: "Lato", sans-serif, Arial;
+  font-family: "Lato", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -67,7 +64,6 @@
   &:active {
     opacity: 30%;
   }
-
 }
 
 .main-footer__academy-logo {
@@ -80,5 +76,5 @@
 }
 
 .main-footer-catalog {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }

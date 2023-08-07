@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   color: #444444;
-  font-family: "Oswald", sans-serif, Arial;
+  font-family: "Oswald", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -18,7 +18,7 @@
 
 .input {
   color: #444444;
-  font-family: "Oswald", sans-serif, Arial;
+  font-family: "Oswald", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -27,7 +27,7 @@
   width: 100%;
   margin: 0;
   border: none;
-  outline: 1px solid #E7E7E7;
+  outline: 1px solid #e7e7e7;
   padding: 14px 0 13px 15px;
   -moz-appearance: textfield;
 }
@@ -39,8 +39,8 @@ input::-webkit-inner-spin-button {
 
 /* Radio */
 .control-label {
-  color: #222;
-  font-family: "Oswald", sans-serif, Arial;
+  color: #222222;
+  font-family: "Oswald", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -63,7 +63,7 @@ input::-webkit-inner-spin-button {
   transform: translateY(-50%);
   width: 30px;
   height: 30px;
-  outline: solid 1px #CDCDCD;
+  outline: solid 1px #cdcdcd;
   cursor: pointer;
 }
 
@@ -79,7 +79,7 @@ input[type="radio"]:checked~.control-mark::before {
   left: 50%;
   width: 15px;
   height: 15px;
-  background-color: #68B738;
+  background-color: #68b738;
   border-radius: 50%;
 }
 
@@ -90,7 +90,7 @@ input[type="radio"]:checked~.control-mark::before {
   transform: translateY(-50%);
   width: 26px;
   height: 26px;
-  outline: solid 1px #CDCDCD;
+  outline: solid 1px #cdcdcd;
   cursor: pointer;
 }
 
@@ -99,12 +99,12 @@ input[type="checkbox"]:checked~.control-mark-ckeckbox::before {
   position: absolute;
   width: 26px;
   height: 26px;
-  background-image: url("../../img/input/tick.svg");
+  background-image: url("../img/input/tick.svg");
 }
 
 .main-form__program-owner-input {
   content: "";
-  background-image: url("../../img/input/email.svg");
+  background-image: url("../img/input/email.svg");
   background-repeat: no-repeat;
   background-position: center right 12px;
 }

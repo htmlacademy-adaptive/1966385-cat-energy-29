@@ -1,27 +1,25 @@
 // Начните писать стили здесь
 @import "./blocks/main-header";
-@import "../sass/common/global";
-@import "../sass/blocks/hero";
-@import "../sass/blocks/meal-plan";
-@import "./../sass/blocks/meal-works";
+@import "./common/global";
+@import "./blocks/hero";
+@import "./blocks/meal-plan";
+@import "././blocks/meal-works";
 
 // Fonts
-@import "../sass/common/fonts";
-@import "../sass/common/wrapper";
-@import "../sass/common/variables";
-@import "../sass/blocks/example";
-@import "../sass/blocks/cooperate";
-@import "../sass/blocks/footer";
-@import "../sass/blocks/main-form";
+@import "./common/fonts";
+@import "./common/wrapper";
+@import "./common/variables";
+@import "./blocks/example";
+@import "./blocks/cooperate";
+@import "./blocks/footer";
+@import "./blocks/main-form";
 
 // Inputs
-@import "../sass/common/inputs";
+@import "./common/inputs";
 
 // Buttons
-@import "../sass/common/buttons";
-
-
+@import "./common/buttons";
 
 /*Catalog*/
-@import "../sass/blocks/catalog-productions";
-@import "../sass/blocks/catalog-additional";
+@import "./blocks/catalog-productions";
+@import "./blocks/catalog-additional";

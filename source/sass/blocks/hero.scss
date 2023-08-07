@@ -1,5 +1,5 @@
 .hero-block {
-  background-image: url("../../../img/hero-block/hero-background.png");
+  background-image: url("../img/hero-block/hero-background.png");
   background-repeat: no-repeat;
   align-items: center;
   width: 320px;
@@ -33,10 +33,10 @@
 .hero-block__link {
   display: flex;
   padding: 7px 44px;
-  font-family: "Oswald";
+  font-family: "Oswald", sans-serif;
   min-height: 24px;
   color: #ffffff;
-  background: #68B738;
+  background: #68b738;
   text-decoration: none;
   width: 192px;
   text-align: center;

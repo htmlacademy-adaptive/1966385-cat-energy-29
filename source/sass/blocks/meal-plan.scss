@@ -17,14 +17,12 @@
   text-align: center;
   margin: 0;
   padding: 0;
-
-
 }
 
 .meal-plan__loss-title {
   position: relative;
   color: #000000;
-  font-family: "Oswald", sans-serif, Arial;
+  font-family: "Oswald", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -41,16 +39,15 @@
     height: 53px;
     left: 20px;
     top: 21px;
-    background-color: #68B738;
+    background-color: #68b738;
     border-radius: 50%;
-
   }
 }
 
 .meal-plan__up-title {
   position: relative;
   color: #000000;
-  font-family: "Oswald", sans-serif, Arial;
+  font-family: "Oswald", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -59,15 +56,14 @@
   &::before {
     position: absolute;
     content: "";
-    background-image: url("../../../img/meal-plan/cat-pro.svg");
+    background-image: url("../img/meal-plan/cat-pro.svg");
     background-repeat: no-repeat;
     width: 50px;
     height: 53px;
     left: 21px;
     top: 24px;
-    background-color: #68B738;
+    background-color: #68b738;
     border-radius: 50%;
-
   }
 }
 
@@ -80,7 +76,7 @@
   margin: 0;
   padding: 29px 33px 0 20px;
   text-align: start;
-  font-family: "Lato", sans-serif, Arial;
+  font-family: "Lato", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -90,9 +86,9 @@
 .meal-plan__link {
   position: relative;
   display: flex;
-  color: #000;
+  color: #000000;
   text-align: center;
-  font-family: "Oswald", sans-serif, Arial;
+  font-family: "Oswald", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -105,7 +101,7 @@
   &::before {
     position: absolute;
     content: "";
-    background-image: url("../../../img/meal-plan/arrow-right.svg");
+    background-image: url("../img/meal-plan/arrow-right.svg");
     background-repeat: no-repeat;
     bottom: 50%;
     top: 50%;
@@ -113,6 +109,5 @@
     width: 32px;
     height: 11px;
     transform: translate(-50%, -50%);
-
   }
 }
