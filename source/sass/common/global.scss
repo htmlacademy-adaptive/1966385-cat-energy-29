@@ -1,10 +1,17 @@
-body {
-  width: 1200px;
-  margin: 0 auto;
-}
+@import "./variables";
 
-.page__body-mobile {
-  width: 320px;
+.page__body {
+  margin: 0;
+  background-color: #ffffff;
+  padding: 0 30px;
+
+  @media (min-width: $table-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 110px;
+  }
 }
 
 .visually-hidden {

@@ -1,5 +1,12 @@
+@import "../common/variables";
+
+.example__desktop {
+  display: flex;
+  flex-direction: column;
+}
+
 .example__title {
-  color: #000000;
+  color: $standard-black;
   font-family: "Oswald", sans-serif;
   font-size: 36px;
   font-weight: 400;
@@ -7,20 +14,33 @@
   margin: 0 0 40px 0;
   padding: 0;
   text-align: start;
+
+  @media (min-width: $table-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin: 45px auto 60px 0;
+  }
 }
 
 .example__description {
-  color: #444444;
+  color: $charcoal-color;
   font-family: "Lato", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
   margin: 0 0 20px 0;
-  max-width: 280px;
+  width: 280px;
+
+  @media (min-width: $table-width) {
+    width: 100%;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 0 55px 0;
+  }
+
 }
 
 .example__result {
-  width: 280px;
   gap: 32px;
   display: flex;
   justify-content: space-between;
@@ -36,7 +56,7 @@
 
 .example__result-number {
   display: flex;
-  color: #000000;
+  color: $standard-black;
   text-align: center;
   font-family: "Oswald", sans-serif;
   font-size: 24px;
@@ -47,26 +67,62 @@
   min-height: 64px;
   align-items: center;
   justify-content: center;
-  outline: 1px solid #cccccc;
+  outline: 1px solid #cdcdcd;
   border-radius: 5px;
+
+  @media (min-width: $table-width) {
+    font-size: 30px;
+    line-height: 37px;
+    min-width: 162px;
+    min-height: 77px;
+  }
 }
 
 .example__result-text {
   position: relative;
-  background-color: #eaeaea;
-  color: #444444;
+  background-color: $example-bg;
+  color: $charcoal-color;
   text-align: center;
   font-family: "Lato", sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 100%;
-  width: 77px;
+  min-width: 77px;
   top: -10px;
+
+  @media (min-width: $table-width) {
+    font-size: 14px;
+    line-height: 14px;
+    background-color: $standard-white;
+    top: -8px;
+    min-width: 96px;
+  }
 }
 
 .example__result-expenses {
-  color: #000000;
+  color: $standard-black;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  @media (min-width: $table-width) {
+    margin: 20px 0 20px auto;
+    width: 174px;
+    text-align: end;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width:$desktop-width) {}
+
+}
+
+.example__result-expenses-number {
+  color: $standard-black;
   text-align: center;
   font-family: "Oswald", sans-serif;
   font-size: 14px;
@@ -76,10 +132,13 @@
 }
 
 .examle__result-slider {
-  background-image: url("../img/example/cat-fat.png"), url("../img/example/cat-thin.png");
-  width: 280px;
+  background-image: url("../../img/example/compare-slider.png");
   height: 256px;
+  width: 100%;
+  margin-top: 20px;
   background-repeat: no-repeat, no-repeat;
-  background-position: left, right;
-  background-color: #eaeaea, #eaeaea;
+  background-position: center;
+  background-color: $example-bg;
+
+
 }

@@ -1,17 +1,95 @@
+.cooperate {
+  display: flex;
+  flex-direction: column;
+}
+
 .cooperate__text {
-  width: 140px;
-  color: #111111;
+  color: $standard-black;
   font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+  margin: 0;
+
+  @media (min-width:$table-width) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  @media (min-width:$desktop-width) {
+    background-color: $card-color;
+    position: absolute;
+    z-index: 1;
+    margin: 95px auto 106px 110px;
+    width: 28%;
+    background-color: $standard-white;
+    padding: 60px 80px;
+  }
+}
+
+.cooperate__text-title {
+  display: flex;
+  flex-direction: row;
+  color: $standard-black;
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
   font-size: 16px;
   text-transform: uppercase;
   margin: 0;
   padding: 0;
+
+  @media (min-width:$table-width) {
+    line-height: 26px;
+    font-size: 20px;
+  }
+
+  @media (min-width:$desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 27%;
+    gap: 80px;
+  }
 }
 
 .cooperate__description {
-  width: 140px;
-  color: #444444;
+  color: $charcoal-color;
   font-family: "Lato", sans-serif;
   font-size: 14px;
+  line-height: 20px;
   font-style: normal;
+
+  @media (min-width:$table-width) {
+    line-height: 20px;
+    font-size: 16px;
+  }
+
+  @media (min-width:$desktop-width) {
+    font-size: 16px;
+    line-height: 20px;
+    width: 27%;
+  }
+}
+
+.cooperate__map {
+  background-image: url("../../img/cooperate/map.png");
+  width: 320px;
+  height: 362px;
+
+  @media (min-width:$table-width) {
+    margin: 0 auto;
+    background-image: url("../../img/cooperate/map-tablet.jpg");
+    width: 100%;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width:$desktop-width) {
+    background-image: url("../../img/cooperate/map-desktop.png");
+    width: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+  }
 }
