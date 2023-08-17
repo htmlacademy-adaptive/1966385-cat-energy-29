@@ -15,12 +15,12 @@
   min-height: 45px;
   margin: 0;
 
-  @media (min-width:$table-width) {
+  @media (min-width: $table-width) {
     font-size: 20px;
     width: 100%;
   }
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     width: 100%;
   }
 }
@@ -36,7 +36,7 @@
   width: 100%;
   margin: 0;
   border: none;
-  outline: 1px solid #e7e7e7;
+  outline: 1px solid $border-color;
   padding: 14px 0 13px 15px;
   -moz-appearance: textfield;
 }
@@ -56,7 +56,7 @@ input::-webkit-inner-spin-button {
   line-height: 18px;
   text-transform: uppercase;
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     font-size: 20px;
     line-height: normal;
   }
@@ -77,7 +77,7 @@ input::-webkit-inner-spin-button {
   transform: translateY(-50%);
   width: 30px;
   height: 30px;
-  outline: solid 1px #cdcdcd;
+  outline: solid 1px $special-grey;
   cursor: pointer;
 }
 
@@ -93,7 +93,7 @@ input[type="radio"]:checked~.control-mark::before {
   left: 50%;
   width: 15px;
   height: 15px;
-  background-color: #68b738;
+  background-color: $base-color;
   border-radius: 50%;
 }
 
@@ -104,7 +104,7 @@ input[type="radio"]:checked~.control-mark::before {
   transform: translateY(-50%);
   width: 26px;
   height: 26px;
-  outline: solid 1px #cdcdcd;
+  outline: solid 1px $special-grey;
   cursor: pointer;
 }
 
@@ -142,23 +142,22 @@ input[type="checkbox"]:checked~.control-mark-ckeckbox::before {
   vertical-align: top;
 
 
-  @media (min-width:$table-width) {
+  @media (min-width: $table-width) {
     margin: 99px 40px;
     width: 50%;
     height: 175px;
   }
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     padding: 11px 295px 134px 20px;
     margin: 0;
     text-align: start;
     align-items: start;
   }
-
 }
 
 .main-form__input-important {
-  @media (min-width:$table-width) {
+  @media (min-width: $table-width) {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -167,7 +166,7 @@ input[type="checkbox"]:checked~.control-mark-ckeckbox::before {
     margin-bottom: 60px;
   }
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     margin-bottom: 80px;
   }
 }

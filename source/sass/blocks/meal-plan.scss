@@ -5,12 +5,12 @@
   margin: 0 auto;
   padding: 0 20px;
 
-  @media (min-width:$table-width) {
+  @media (min-width: $table-width) {
     display: flex;
     justify-content: space-between;
   }
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     column-gap: 80px;
     display: flex;
     flex-direction: row;
@@ -25,8 +25,7 @@
   margin: 0;
   padding: 0;
 
-  @media (min-width:$table-width) {
-
+  @media (min-width: $table-width) {
     &::after {
       content: "";
       background-image: url("../../img/meal-plan/cat-slim-tablet.png");
@@ -38,7 +37,7 @@
     }
   }
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     &::after {
       background-image: url("../../img/meal-plan/cat-slim-desctop.png");
       width: 134px;
@@ -57,8 +56,7 @@
   margin: 0;
   padding: 0;
 
-  @media (min-width:$table-width) {
-
+  @media (min-width: $table-width) {
     &::after {
       content: "";
       background-image: url("../../img/meal-plan/cat-pro-tablet.png");
@@ -70,7 +68,7 @@
     }
   }
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     &::after {
       background-image: url("../../img/meal-plan/cat-pro-desctop.png");
       width: 134px;
@@ -114,7 +112,7 @@
     }
   }
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     text-align: center;
     margin-left: auto;
   }
@@ -152,10 +150,9 @@
     }
   }
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     text-align: center;
     margin-left: 162px;
-
   }
 }
 
@@ -193,7 +190,7 @@
     line-height: 24px;
   }
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     max-width: max-content;
 
     &::before {
@@ -238,6 +235,4 @@
       left: 132px;
     }
   }
-
-
 }

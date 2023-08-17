@@ -2,7 +2,7 @@
 
 .page__body {
   margin: 0;
-  background-color: #ffffff;
+  background-color: $standard-white;
   padding: 0 30px;
 
   @media (min-width: $table-width) {

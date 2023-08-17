@@ -5,7 +5,7 @@
 
 .catalog__production-title {
   margin: 027px 41px 41px 20px;
-  color: #000000;
+  color: $standard-black;
   font-family: "Oswald", sans-serif;
   font-size: 36px;
   font-style: normal;
@@ -13,7 +13,7 @@
   line-height: 36px;
   text-align: center;
 
-  @media (min-width:$table-width) {
+  @media (min-width: $table-width) {
     font-size: 60px;
     line-height: 60px;
     text-align: left;
@@ -25,14 +25,14 @@
   margin: 0;
   padding: 0;
 
-  @media (min-width:$table-width) {
+  @media (min-width: $table-width) {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(324px, 1fr));
     column-gap: 60px;
     row-gap: 60px;
   }
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
     column-gap: 80px;
@@ -45,11 +45,11 @@
   flex-direction: column;
   margin: 11px 20px 14px 20px;
 
-  @media (min-width:$table-width) {
+  @media (min-width: $table-width) {
     margin: 0;
     min-height: 430px;
-    padding: 0px 37px 40px 37px;
-    background-color: #cdcdcd;
+    padding: 0 37px 40px 37px;
+    background-color: $special-grey;
   }
 }
 
@@ -61,14 +61,11 @@
   min-height: 250px;
   justify-content: flex-end;
 
-  @media (min-width:$table-width) {
+  @media (min-width: $table-width) {
     margin: 0;
     outline: 2px solid $card-color;
     background-color: $standard-white;
   }
-
-  @media (min-width:$desktop-width) {}
-
 }
 
 .catalog__production-link {
@@ -101,7 +98,7 @@
   line-height: 20px;
   text-transform: uppercase;
 
-  @media (min-width:$table-width) {
+  @media (min-width: $table-width) {
     font-size: 20px;
     line-height: 24px;
     text-align: center;
@@ -109,7 +106,7 @@
 }
 
 .catalog__production__table {
-  color: #444444;
+  color: $charcoal-color;
   text-align: center;
   font-family: "Lato", sans-serif;
   font-size: 12px;
@@ -117,7 +114,7 @@
   font-weight: 400;
   line-height: 16px;
 
-  @media (min-width:$table-width) {
+  @media (min-width: $table-width) {
     display: flex;
     flex-direction: column;
     row-gap: 10px;
@@ -132,7 +129,7 @@
   flex-direction: row;
   justify-content: space-between;
 
-  @media (min-width:$table-width) {
+  @media (min-width: $table-width) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -140,7 +137,7 @@
 }
 
 .catalog__production__item-description-more {
-  color: #444444;
+  color: $charcoal-color;
   text-align: center;
   font-family: "Lato", sans-serif;
   font-size: 12px;

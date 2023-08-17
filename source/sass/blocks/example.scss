@@ -37,7 +37,6 @@
     line-height: 24px;
     margin: 0 0 55px 0;
   }
-
 }
 
 .example__result {
@@ -116,9 +115,6 @@
     font-size: 20px;
     line-height: 30px;
   }
-
-  @media (min-width:$desktop-width) {}
-
 }
 
 .example__result-expenses-number {
@@ -139,6 +135,4 @@
   background-repeat: no-repeat, no-repeat;
   background-position: center;
   background-color: $example-bg;
-
-
 }

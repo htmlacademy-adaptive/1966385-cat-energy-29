@@ -42,8 +42,6 @@
   @media (min-width: $table-width) {
     display: flex;
   }
-
-
 }
 
 .main-nav__list {
@@ -82,5 +80,4 @@
   &--open {
     background-image: url("../../img/header/header-nav-close.svg");
   }
-
 }

@@ -8,11 +8,11 @@
   margin-bottom: 20px;
   mix-blend-mode: multiply;
 
-  @media (min-width:$table-width) {
+  @media (min-width: $table-width) {
     background-image: none;
   }
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     background-image: url("../../img/hero-block/hero-background-desctop.jpg");
     background-position: right;
     margin-bottom: 52px;
@@ -32,7 +32,7 @@
   min-width: 250px;
   text-align: center;
 
-  @media (min-width:$table-width) {
+  @media (min-width: $table-width) {
     color: $standard-black;
     text-align: start;
     max-width: 416px;
@@ -41,7 +41,7 @@
     line-height: 60px;
   }
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     margin: 110px auto 40px 80px;
   }
 }
@@ -55,7 +55,7 @@
   line-height: 14px;
   text-transform: uppercase;
 
-  @media (min-width:$table-width) {
+  @media (min-width: $table-width) {
     color: $standard-black;
     margin: 0 auto 21px 90px;
     position: relative;
@@ -82,16 +82,15 @@
   align-items: center;
   justify-content: center;
 
-  @media (min-width:$table-width) {
+  @media (min-width: $table-width) {
     position: absolute;
     top: 370px;
     left: 120px;
     padding: 14px 26px;
   }
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     left: 200px;
     top: 456px;
   }
-
 }
