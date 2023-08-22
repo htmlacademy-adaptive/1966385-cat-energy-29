@@ -1,92 +1,208 @@
 .meal-plan {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  width: 1200px;
+  row-gap: 20px;
   margin: 0 auto;
   padding: 0 20px;
+
+  @media (min-width: $table-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    column-gap: 80px;
+    display: flex;
+    flex-direction: row;
+  }
 }
 
-.meal-plan__loss,
-.meal-plan__up {
+.meal-plan__loss {
   display: flex;
   flex-direction: column;
-  width: 280px;
-  min-height: 266px;
-  background-color: #f2f2f2;
+  background-color: $card-color;
   text-align: center;
   margin: 0;
   padding: 0;
+
+  @media (min-width: $table-width) {
+    &::after {
+      content: "";
+      background-image: url("../../img/meal-plan/cat-slim-tablet.png");
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 211px;
+      position: absolute;
+      right: 113px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      background-image: url("../../img/meal-plan/cat-slim-desctop.png");
+      width: 134px;
+      height: 110px;
+      left: 55px;
+      top: 10px;
+    }
+  }
+}
+
+.meal-plan__up {
+  display: flex;
+  flex-direction: column;
+  background-color: $card-color;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $table-width) {
+    &::after {
+      content: "";
+      background-image: url("../../img/meal-plan/cat-pro-tablet.png");
+      background-repeat: no-repeat;
+      width: 268px;
+      height: 200px;
+      position: absolute;
+      right: 80px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      background-image: url("../../img/meal-plan/cat-pro-desctop.png");
+      width: 134px;
+      height: 110px;
+      left: 55px;
+      top: 15px;
+    }
+  }
 }
 
 .meal-plan__loss-title {
   position: relative;
-  color: #000000;
+  color: $standard-black;
   font-family: "Oswald", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: 37px;
-  padding: 30px 80px 0 90px;
-  margin: 0;
+  margin: 0 auto 30px 70px;
+  text-transform: uppercase;
+
 
   &::before {
     position: absolute;
     content: "";
-    background-image: url("../../../img/meal-plan/cat-slim.svg");
+    background-image: url("../../img/meal-plan/cat-slim.png");
     background-repeat: no-repeat;
     width: 50px;
     height: 53px;
-    left: 20px;
-    top: 21px;
-    background-color: #68b738;
-    border-radius: 50%;
+    left: -70px;
+    top: -5px;
+  }
+
+  @media (min-width: $table-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin: 0 auto 24px 0;
+
+    &::before {
+      background-image: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
+    margin-left: auto;
   }
 }
 
 .meal-plan__up-title {
   position: relative;
-  color: #000000;
+  color: $standard-black;
   font-family: "Oswald", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: 37px;
+  margin: 0 auto 30px 70px;
+  text-transform: uppercase;
 
   &::before {
     position: absolute;
     content: "";
-    background-image: url("../img/meal-plan/cat-pro.svg");
+    background-image: url("../img/meal-plan/cat-pro.png");
     background-repeat: no-repeat;
-    width: 50px;
-    height: 53px;
-    left: 21px;
-    top: 24px;
-    background-color: #68b738;
-    border-radius: 50%;
+    width: 67px;
+    height: 50px;
+    left: -80px;
+    top: -5px;
+  }
+
+  @media (min-width: $table-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin: 0 auto 24px 0;
+
+    &::before {
+      background-image: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
+    margin-left: 162px;
   }
 }
 
 .meal-plan__loss-description,
 .meal-plan__up-description {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 227px;
-  margin: 0;
-  padding: 29px 33px 0 20px;
+  margin: 0 auto 42px 0;
   text-align: start;
   font-family: "Lato", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
+  max-width: 227px;
+
+  &::before {
+    position: absolute;
+    display: block;
+    flex-grow: 1;
+    content: "";
+    width: 100%;
+    height: 1px;
+    bottom: -21px;
+    background-color: $gainsboro-color;
+  }
+
+  @media (min-width: $table-width) {
+    min-width: 340px;
+    min-height: 96px;
+    margin: 0 auto 48px 0;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: max-content;
+
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .meal-plan__link {
   position: relative;
   display: flex;
-  color: #000000;
+  color: $standard-black;
   text-align: center;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
@@ -95,7 +211,7 @@
   line-height: 16px;
   text-transform: uppercase;
   text-decoration: none;
-  margin: 38px 126px 18px 20px;
+  margin: 0 auto 0 0;
 
 
   &::before {
@@ -106,8 +222,17 @@
     bottom: 50%;
     top: 50%;
     left: 122px;
-    width: 32px;
     height: 11px;
     transform: translate(-50%, -50%);
+    width: 32px;
+  }
+
+  @media (min-width: $table-width) {
+    font-size: 20px;
+    line-height: 20px;
+
+    &::before {
+      left: 132px;
+    }
   }
 }

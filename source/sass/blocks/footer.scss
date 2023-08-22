@@ -2,7 +2,7 @@
   background-image: url("../img/footer/footer-logo.svg");
   background-repeat: no-repeat;
   display: flex;
-  width: 128px;
+  min-width: 128px;
   height: 24px;
   justify-content: center;
   align-items: center;
@@ -33,10 +33,10 @@
 
 .main-footer__academy {
   min-width: 280px;
-  min-height: 34px;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
+
+  @media (min-width: $table-width) {
+    min-width: 168px;
+  }
 }
 
 .main-footer__academy-list {
@@ -51,7 +51,7 @@
 
 .main-footer__academy-link {
   display: flex;
-  color: #444444;
+  color: $charcoal-color;
   font-family: "Lato", sans-serif;
   font-size: 16px;
   font-style: normal;
@@ -59,6 +59,7 @@
   line-height: 20px;
   text-decoration: none;
   align-items: center;
+  justify-content: space-between;
 
   &:active {
     opacity: 30%;
@@ -66,14 +67,23 @@
 }
 
 .main-footer__academy-logo {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  bottom: 50%;
-  transform: translate(-50%, -50%);
   height: 27px;
+
+  @media (min-width: $table-width) {
+    position: static;
+  }
 }
 
 .main-footer-catalog {
-  background-color: #f2f2f2;
+  background-color: $card-color;
+  margin-left: calc(-100vw / 2 + 100% / 2);
+  margin-right: calc(-100vw / 2 + 100% / 2);
+
+  @media (min-width: $table-width) {
+    padding: 55px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 66px 110px;
+  }
 }

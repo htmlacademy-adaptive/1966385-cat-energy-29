@@ -1,31 +1,67 @@
 .main-wrapper {
   margin: 0 auto;
+  background-color: $standard-white;
 }
 
 .wrapper {
   display: flex;
   justify-content: space-between;
-  width: 320px;
-  margin: 0 auto;
 }
 
+.meal-plan__wrapper {
+  padding: 30px 33px 22px 20px;
 
-.main-nav__wrapper {
-  display: none;
+  @media (min-width: $table-width) {
+    padding: 77px 63px 57px 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    padding: 77px 61px 59px 52px;
+  }
 }
 
 .meal-work__wrapper {
   display: flex;
   gap: 20px;
   align-items: center;
+
+  @media (min-width: $table-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    column-gap: 43px;
+  }
 }
 
 .example__wrapper {
-  width: 320px;
-  margin: 0;
-  padding: 0 20px;
-  background-color: #eaeaea;
-  margin-bottom: 20px;
+  padding: 20px 20px;
+  background-color: $example-bg;
+
+  @media (min-width: $table-width) {
+    padding: 0 30px 0 30px;
+    background-color: $standard-white;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.example-result__wrapper {
+  @media (min-width: $table-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 77px;
+  }
+}
+
+.example__result-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .cooperate__wrapper {
@@ -33,32 +69,58 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 26px 20px;
+  padding: 26px 15px;
   font-weight: 400;
   line-height: 20px;
   min-height: 112px;
+
+  @media (min-width: $table-width) {
+    padding: 60px 70px;
+  }
+
+  @media (min-width: $table-width) {
+    padding: 0;
+    gap: 80px;
+  }
 }
 
 .footer__wrapper {
-  display: inline-flex;
-  padding: 40px 20px;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
-  width: 320px;
+  row-gap: 20px;
+
+  @media (min-width: $table-width) {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
-.main-form__wrapper {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  margin: 0 auto;
-  width: 320px;
+.main-form__program-wrapper {
+  @media (min-width: $table-width) {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+    column-gap: 80px;
+    align-items: end;
+  }
 }
 
 .main-catalog__wrapper {
-  margin: 0 20px 0 20px;
-  width: 320px;
+  padding: 0 20px;
 }
 
 .catalog__production-list-wrapper {
@@ -74,4 +136,45 @@
   align-items: center;
   gap: 13px;
   flex-shrink: 0;
+
+  @media (min-width: $table-width) {
+    display: inline-flex;
+    padding: 0 37px 40px 37px;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+}
+
+.catalog-additional__wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    min-width: 1221px;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 91px 109px;
+  }
+}
+
+.catalog-additional__item-wrapper {
+  @media (min-width: $table-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 15px 0 17px 0;
+    justify-content: flex-start;
+    margin: 0;
+    min-width: 662px;
+  }
+}
+
+.main-form__input-wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+    column-gap: 80px;
+  }
 }

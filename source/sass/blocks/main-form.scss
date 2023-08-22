@@ -1,5 +1,5 @@
 .main-form__title {
-  color: #000000;
+  color: $standard-black;
   font-family: "Oswald", sans-serif;
   font-size: 24px;
   font-style: normal;
@@ -7,15 +7,28 @@
   line-height: 26px;
   margin: 27px 0 37px 0;
   padding: 0;
+
+  @media (min-width: $table-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .main-form__program {
   display: flex;
   flex-direction: column;
   border: none;
-  margin: 0 20px 24px 20px;
   padding: 0;
   text-align: left;
+  margin: 0;
+
+  @media (min-width: $table-width) {
+    gap: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
 }
 
 .main-form__program-title {
@@ -29,6 +42,12 @@
   text-transform: uppercase;
   padding: 0;
   margin-bottom: 30px;
+
+  @media (min-width: $table-width) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 66px;
+  }
 }
 
 .main-form__radio {
@@ -36,6 +55,21 @@
   border: none;
   margin: 22px 20px 19px 20px;
   padding: 0;
+
+  @media (min-width: $table-width) {
+    font-size: 20px;
+    line-height: normal;
+    outline: 1px solid $border-color;
+    outline-offset: 20px;
+    min-width: 198px;
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 23px;
+    width: 100%;
+    outline-offset: 25px;
+  }
 }
 
 .main-form__list {
@@ -57,12 +91,26 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
+
+  @media (min-width: $desktop-width) {
+    margin: 80px 0 70px 0;
+  }
 }
 
 .main-form__contakt-title {
-  position: relative;
-  width: 187px;
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  min-width: 187px;
   margin-bottom: 35px;
+
+  @media (min-width: $table-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin: 0 auto 76px 40px;
+  }
 }
 
 .main-form__comments {
@@ -71,7 +119,6 @@
   border: none;
   margin: 0;
   padding: 0;
-  width: 280px;
   gap: 38px;
 }
 
@@ -83,10 +130,20 @@
   border: none;
   margin: 0 0 34px 0;
   padding: 0;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 54px;
+  }
 }
 
 .main-form__extra-title {
   margin-bottom: 36px;
+
+  @media (min-width: $table-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin: 0 auto 57px 40px;
+  }
 }
 
 .main-form__extra-list {
@@ -96,14 +153,25 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @media (min-width: $table-width) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(221px, 1fr));
+    column-gap: 123px;
+    row-gap: 32px;
+  }
 }
 
 .main-form__description {
-  color: #000000;
+  color: $shade-black;
   text-align: center;
   font-family: "Lato", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 16px;
+
+  @media (min-width: $table-width) {
+    font-size: 16px;
+  }
 }
