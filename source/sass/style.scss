@@ -1,14 +1,15 @@
-// Начните писать стили здесь
 @import "./blocks/main-header";
 @import "./common/global";
 @import "./blocks/hero";
 @import "./blocks/meal-plan";
-@import "././blocks/meal-works";
+@import "./blocks/meal-works";
+@import "./blocks/site-list";
 
 // Fonts
 @import "./common/fonts";
+
+// Wrappers
 @import "./common/wrapper";
-@import "./common/variables";
 @import "./blocks/example";
 @import "./blocks/cooperate";
 @import "./blocks/footer";
@@ -23,3 +24,9 @@
 /*Catalog*/
 @import "./blocks/catalog-productions";
 @import "./blocks/catalog-additional";
+
+//  Colors
+@import "./common/color";
+
+// Media
+@import "./common/variables";
