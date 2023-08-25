@@ -15,10 +15,7 @@
     position: static;
     display: flex;
     column-gap: 33px;
-  }
-
-  @media (min-width: $desktop-width) {
-    display: flex;
+    background-color: inherit;
   }
 }
 
@@ -29,8 +26,9 @@
   cursor: pointer;
 
   @media (min-width: $desktop-width) {
+    display: flex;
+    z-index: 3;
     color: $standard-white;
-    background-color: $base-color;
   }
 }
 
@@ -76,7 +74,5 @@
   text-decoration-thickness: 2px;
   text-underline-offset: 9px;
 
-  @media (min-width: $desktop-width) {
-    text-decoration-color: $standard-white;
-  }
+  @media (min-width: $desktop-width) {}
 }

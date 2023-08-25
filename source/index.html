@@ -6,6 +6,10 @@
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/favicon152x152.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/faviconы/favicon32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/faviconы/favicon16x16.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
@@ -13,7 +17,12 @@
   <header class="main-header main-header__mobile">
     <div class="wrapper">
       <a href="#" class="main-header__logo">
-        <img class="main-header__logo-image" src="./img/logo-pic.png" alt="Логотип Cat Energy" width="33" height="38">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/header/logo-pic-desctop.svg">
+          <source media="(min-width: 768px)" srcset="./img/header/logo-pic-tablet.svg">
+          <img class="main-header__logo-image" src="./img/header/logo-mobile.svg" alt="Логотип Cat Energy" width="33"
+            height="38">
+        </picture>
         <svg class="main-header__logo-text" xmlns="http://www.w3.org/2000/svg" width="101" height="18" fill="none"
           viewBox="0 0 101 18">
           <g fill="#111" clip-path="url(#a)">
@@ -52,14 +61,17 @@
     </nav>
 
   </header>
-
-
   <main class="main-container main-container-wrapper">
     <section class="hero-block">
       <h1 class="hero-block__title">Функциональное питание для котов</h1>
       <p class="hero-block__description">Занялся собой? Займись котом!</p>
-      <img class="hero-block__image" src="./img/hero-images.png" alt="Изображение баночки Cat Energy" width="280"
-        height="270">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="./img/index/index-can-desktop@1x.png">
+        <source media="(min-width: 768px)"
+          srcset="./img/index/index-can-tablet@1x.png 1x, ./img/index/index-can-tablet@2x.png 2x">
+        <img class="hero-block__image" src="./img/index/index-can-mobile@1x.png"
+          srcset="./img/index/index-can-mobile@2x.png 2x" alt="Изображение баночки Cat Energy" width="280" height="270">
+      </picture>
       <a href="#" class="hero-block__link">подобрать программу</a>
     </section>
     <section class="meal-plan">

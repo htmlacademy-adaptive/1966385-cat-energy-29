@@ -1,17 +1,8 @@
 @import "./variables";
 
 .page__body {
-  margin: 0;
+  margin: 0 auto;
   background-color: $standard-white;
-  padding: 0 30px;
-
-  @media (min-width: $table-width) {
-    padding: 0 30px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 0 110px;
-  }
 }
 
 .visually-hidden {
