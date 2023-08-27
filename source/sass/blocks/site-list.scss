@@ -28,6 +28,18 @@
   @media (min-width: $desktop-width) {
     display: flex;
     z-index: 3;
+  }
+}
+
+.site-list__link-index {
+  display: block;
+  text-decoration: none;
+  color: $standard-black;
+  cursor: pointer;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    z-index: 3;
     color: $standard-white;
   }
 }

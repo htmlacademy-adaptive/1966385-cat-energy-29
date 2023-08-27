@@ -1,6 +1,16 @@
 .catalog-additional {
   display: flex;
   flex-direction: column;
+  padding: 25px 20px;
+
+  @media (min-width:$table-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width:$desktop-width) {
+    padding: 0 110px;
+
+  }
 }
 
 .catalog-additional__list {
@@ -25,7 +35,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 78px 0;
+    margin: 78px 0 80px 0;
     font-size: 36px;
     line-height: 36px;
   }
@@ -36,18 +46,13 @@
 
   @media (min-width: $table-width) {
     outline: 1px solid $special-grey;
-    padding: 27px 40px;
+    padding: 27px 38px;
+    min-height: auto;
   }
 
   @media (min-width: $desktop-width) {
+    padding: 15px 0 17px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 72px;
-    padding: 0;
-    outline: none;
-    border-top: 1px solid $special-grey;
   }
 
   &:last-child {
@@ -63,10 +68,15 @@
   font-weight: 400;
   line-height: 16px;
   text-transform: uppercase;
-  margin: 0;
+  margin: 0 auto 13px 0;
+
+  @media (min-width: $table-width) {
+    margin: 0;
+  }
 
   @media (min-width: $desktop-width) {
-    margin-right: auto;
+    margin: 0 80px 0 0;
+    min-width: 200px;
     font-size: 20px;
     line-height: 20px;
   }
@@ -110,36 +120,90 @@
 }
 
 .catalog-additional__gift {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   align-content: flex-end;
   min-height: 204px;
-  background-color: $base-color;
-  background-image: url("../img/catalog/cat-backpag.png");
+  background: $base-color url("../../img/catalog/image\ 1.png");
+  background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
   color: $standard-white;
   text-align: center;
-  padding: 43px 61px 43px 58px;
-  margin-top: 35px;
-  margin-bottom: 35px;
+  padding: 186px 61px 43px 58px;
+  margin: 35px 0 0 0;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 100px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 78px;
+    height: 80px;
+    background-image: url("../../img/catalog/icon-gift.svg");
+    background-repeat: no-repeat;
+
+    @media (min-width: $table-width) {
+      left: 130px;
+    }
+  }
+
+  @media (min-resolution: 2dppx) {
+    background: $base-color url("../../img/catalog/image\ 1@2x.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 
   @media (min-width: $table-width) {
     display: flex;
-    padding: 71px 125px 69px 421px;
+    background: $base-color url("../../img/catalog/image\ 2.png");
     align-content: center;
-    background-image: url("../../img/catalog/cat-backpag-2.png");
-    max-height: 200px;
-    margin: 70px 0 75px 0;
+    min-height: 200px;
     background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0 121px 0 760px;
+    margin: 70px 0 0 0;
+    justify-content: flex-end;
+
+    @media (min-resolution: 2dppx) {
+      background: $base-color url("../../img/catalog/image\ 2@2x.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    width: 30%;
-    background-image: url("../../img/catalog/cat-backpag-3.png");
-    max-width: 245px;
-    background-size: contain;
-    background-position: right;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    min-height: 204px;
+    background: $base-color url("../../img/catalog/image\ 1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    color: $standard-white;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 245px;
+    height: 288px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 100px;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+      width: 78px;
+      height: 80px;
+      background-image: url("../../img/catalog/icon-gift.svg");
+      background-repeat: no-repeat;
+    }
   }
 }
 
@@ -155,6 +219,11 @@
 
   @media (min-width: $table-width) {
     text-align: start;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 185px 42px 42px 42px;
+    text-align: center;
   }
 }
 
