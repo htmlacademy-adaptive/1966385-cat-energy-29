@@ -16,11 +16,17 @@
   }
 
   @media (min-width: $desktop-width) {
+    padding: 55px 100px 55px 110px;
+  }
+}
+
+.main-header__hero-bg {
+  @media (min-width: $desktop-width) {
     &::before {
       content: "";
       position: absolute;
       display: flex;
-      right: -30px;
+      right: 0px;
       transform: none;
       left: revert;
       width: 720px;
@@ -29,14 +35,13 @@
       background-image: url("../../img/hero-block/index-background-desktop\ 1.png");
       background-repeat: no-repeat;
       z-index: -2;
-
     }
 
     &::after {
       content: "";
       position: absolute;
       display: flex;
-      right: -30px;
+      right: 0px;
       background-color: rgba(104, 183, 56, .85);
       z-index: 2;
       width: 720px;
@@ -44,6 +49,8 @@
       top: 0;
     }
   }
+
+  ;
 }
 
 .main-header__logo {

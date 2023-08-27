@@ -13,7 +13,12 @@
   <header class="main-header main-header__mobile">
     <div class="wrapper">
       <a href="index.html" class="main-header__logo">
-        <img class="main-header__logo-image" src="./img/logo-pic.png" alt="Логотип Cat Energy" width="33" height="38">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/header/logo-pic-desctop.svg">
+          <source media="(min-width: 768px)" srcset="./img/header/logo-pic-tablet.svg">
+          <img class="main-header__logo-image" src="./img/header/logo-mobile.svg" alt="Логотип Cat Energy" width="33"
+            height="38">
+        </picture>
         <svg class="main-header__logo-text" xmlns="http://www.w3.org/2000/svg" width="101" height="18" fill="none"
           viewBox="0 0 101 18">
           <g fill="#111" clip-path="url(#a)">
@@ -163,9 +168,12 @@
           <address class="cooperate__description">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
         </div>
       </div>
-      <div class="cooperate__map">
-        <span class="visually-hidden">Место нахождение магазина</span>
-      </div>
+      <iframe class="cooperate__map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d428.3238550643958!2d30.322318544068956!3d59.938632599302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sby!4v1693143483181!5m2!1sru!2sby"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+        <title>место нахождение магазина</title>
+      </iframe>
     </section>
   </main>
   <footer class="main-footer main-footer-catalog">

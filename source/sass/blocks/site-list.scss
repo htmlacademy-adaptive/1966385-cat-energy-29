@@ -65,6 +65,11 @@
       display: none;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    background-color: transparent;
+    position: relative;
+  }
 }
 
 .site-list__link-current {
