@@ -32,7 +32,6 @@
     align-items: start;
     column-gap: 43px;
   }
-
 }
 
 .example-result__number-wrapper {
@@ -93,7 +92,6 @@
 }
 
 .cooperate__wrapper {
-  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -209,7 +207,31 @@
   }
 }
 
+.main-form__wrapper {
+  position: relative;
+  padding: 0 20px;
+
+  &::before {
+    position: absolute;
+    border-top: 1px solid $gainsboro-color;
+  }
+
+  @media (min-width: $table-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 110px;
+  }
+}
+
 .main-form__input-wrapper {
+  @media (min-width: $table-width) {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
   @media (min-width: $desktop-width) {
     display: flex;
     flex-direction: row;

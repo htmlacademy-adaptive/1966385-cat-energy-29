@@ -5,7 +5,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 26px;
-  margin: 27px 0 37px 0;
+  margin: 0 0 37px 0;
   padding: 0;
 
   @media (min-width: $table-width) {
@@ -15,15 +15,29 @@
 }
 
 .main-form__program {
+  position: relative;
   display: flex;
   flex-direction: column;
   border: none;
-  padding: 0;
+  padding: 27px 0 24px 0;
   text-align: left;
   margin: 0;
+  row-gap: 14px;
+
+  &:last-child::before {
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid $gainsboro-color;
+    width: 100%;
+    top: 384px;
+  }
 
   @media (min-width: $table-width) {
     gap: 20px;
+
+    &:last-child::before {
+      display: none;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -53,7 +67,7 @@
 .main-form__radio {
   display: flex;
   border: none;
-  margin: 22px 20px 19px 20px;
+  margin: 22px 0 19px 0;
   padding: 0;
 
   @media (min-width: $table-width) {
@@ -61,14 +75,14 @@
     line-height: normal;
     outline: 1px solid $border-color;
     outline-offset: 20px;
-    min-width: 198px;
     margin-bottom: 65px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 23px;
+    margin-bottom: 39px;
     width: 100%;
-    outline-offset: 25px;
+    outline-offset: 15px;
+    padding: 10px 28px;
   }
 }
 
@@ -118,7 +132,7 @@
   flex-direction: column;
   border: none;
   margin: 0;
-  padding: 0;
+  padding: 0 20px;
   gap: 38px;
 }
 
@@ -159,6 +173,11 @@
     grid-template-columns: repeat(auto-fit, minmax(221px, 1fr));
     column-gap: 123px;
     row-gap: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    column-gap: 0;
   }
 }
 

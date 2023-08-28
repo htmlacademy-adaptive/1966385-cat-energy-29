@@ -5,12 +5,11 @@
   flex-direction: column;
   justify-content: left;
 
-  @media (min-width:$table-width) {
+  @media (min-width: $table-width) {
     background-color: $standard-white;
     margin-left: calc((100vw / 2 - 100% / 2) * -1);
     margin-right: calc((100vw / 2 - 100% / 2) * -1);
     padding: 0 30px;
-
   }
 
   @media (min-width: $desktop-width) {
@@ -119,7 +118,6 @@
 
   @media (min-width: $desktop-width) {
     background-color: inherit;
-
   }
 }
 
@@ -182,7 +180,7 @@
     }
   }
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     background-image: url("../../img/example/compare-slider-desktop.png");
     margin-bottom: 85px;
   }

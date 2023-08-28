@@ -3,13 +3,12 @@
   flex-direction: column;
   padding: 25px 20px;
 
-  @media (min-width:$table-width) {
+  @media (min-width: $table-width) {
     padding: 0 30px;
   }
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     padding: 0 110px;
-
   }
 }
 

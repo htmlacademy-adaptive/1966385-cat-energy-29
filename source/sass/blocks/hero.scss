@@ -26,7 +26,7 @@
     width: 100%;
     height: 302px;
     z-index: -1;
-    background-color: rgba(104, 183, 56, .85);
+    background-color: $apple-color;
     margin-left: calc((100vw / 2 - 100% / 2) * -1);
     margin-right: calc((100vw / 2 - 100% / 2) * -1);
   }
@@ -39,7 +39,6 @@
     &::after {
       display: none;
     }
-
   }
 
   @media (min-width: $desktop-width) {
