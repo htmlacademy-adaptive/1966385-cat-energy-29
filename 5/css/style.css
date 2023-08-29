@@ -867,7 +867,7 @@ html {
   }
 }
 
-.site-list__link-current {
+.site-list__link--current {
   text-decoration: underline;
   -webkit-text-decoration-color: #68b738;
           text-decoration-color: #68b738;
@@ -2358,7 +2358,7 @@ input[type=checkbox]:checked ~ .control-mark-ckeckbox::before {
   flex-wrap: wrap;
   align-content: flex-end;
   min-height: 204px;
-  background: #68b738 url("../../img/catalog/image 1.png");
+  background: #68b738 url("../../img/catalog/image-1.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
@@ -2386,7 +2386,7 @@ input[type=checkbox]:checked ~ .control-mark-ckeckbox::before {
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   .catalog-additional__gift {
-    background: #68b738 url("../../img/catalog/image 1@2x.png");
+    background: #68b738 url("../../img/catalog/image-1@2x.png");
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -2394,7 +2394,7 @@ input[type=checkbox]:checked ~ .control-mark-ckeckbox::before {
 @media (min-width: 768px) {
   .catalog-additional__gift {
     display: flex;
-    background: #68b738 url("../../img/catalog/image 2.png");
+    background: #68b738 url("../../img/catalog/image-2.png");
     align-content: center;
     min-height: 200px;
     background-size: cover;
@@ -2406,7 +2406,7 @@ input[type=checkbox]:checked ~ .control-mark-ckeckbox::before {
 }
 @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
   .catalog-additional__gift {
-    background: #68b738 url("../../img/catalog/image 2@2x.png");
+    background: #68b738 url("../../img/catalog/image-2@2x.png");
     background-size: contain;
     background-repeat: no-repeat;
   }
@@ -2418,7 +2418,7 @@ input[type=checkbox]:checked ~ .control-mark-ckeckbox::before {
     flex-wrap: wrap;
     align-content: flex-end;
     min-height: 204px;
-    background: #68b738 url("../../img/catalog/image 1.png");
+    background: #68b738 url("../../img/catalog/image-1.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
