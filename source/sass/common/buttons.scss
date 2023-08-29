@@ -18,6 +18,7 @@
   line-height: 20px;
   text-transform: uppercase;
   margin-bottom: 21px;
+  width: 100%;
 
   @media (min-width: $table-width) {
     margin: 0;
@@ -45,7 +46,6 @@
   @media (min-width: $desktop-width) {
     padding: 8px 26px;
     height: auto;
-    width: 192px;
   }
 }
 
@@ -64,4 +64,12 @@
   text-transform: uppercase;
   border: none;
   cursor: pointer;
+  width: 100%;
+}
+
+.catalog-addiction__button {
+  @media (min-width: $desktop-width) {
+    min-width: 244px;
+    padding: 10px 0;
+  }
 }

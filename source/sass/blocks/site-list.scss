@@ -15,10 +15,7 @@
     position: static;
     display: flex;
     column-gap: 33px;
-  }
-
-  @media (min-width: $desktop-width) {
-    display: flex;
+    background-color: inherit;
   }
 }
 
@@ -29,8 +26,21 @@
   cursor: pointer;
 
   @media (min-width: $desktop-width) {
+    display: flex;
+    z-index: 3;
+  }
+}
+
+.site-list__link-index {
+  display: block;
+  text-decoration: none;
+  color: $standard-black;
+  cursor: pointer;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    z-index: 3;
     color: $standard-white;
-    background-color: $base-color;
   }
 }
 
@@ -67,16 +77,17 @@
       display: none;
     }
   }
+
+  @media (min-width: $desktop-width) {
+    background-color: transparent;
+    position: relative;
+  }
 }
 
-.site-list__link-current {
+.site-list__link--current {
   text-decoration: underline;
   text-decoration-color: $base-color;
   text-underline-position: under;
   text-decoration-thickness: 2px;
   text-underline-offset: 9px;
-
-  @media (min-width: $desktop-width) {
-    text-decoration-color: $standard-white;
-  }
 }

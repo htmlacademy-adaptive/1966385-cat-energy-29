@@ -73,17 +73,3 @@
     position: static;
   }
 }
-
-.main-footer-catalog {
-  background-color: $card-color;
-  margin-left: calc(-100vw / 2 + 100% / 2);
-  margin-right: calc(-100vw / 2 + 100% / 2);
-
-  @media (min-width: $table-width) {
-    padding: 55px 30px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 66px 110px;
-  }
-}
