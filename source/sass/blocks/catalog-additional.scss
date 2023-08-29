@@ -124,7 +124,7 @@
   flex-wrap: wrap;
   align-content: flex-end;
   min-height: 204px;
-  background: $base-color url("../../img/catalog/image\ 1.png");
+  background: $base-color url("../../img/catalog/image-1.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
@@ -151,14 +151,14 @@
   }
 
   @media (min-resolution: 2dppx) {
-    background: $base-color url("../../img/catalog/image\ 1@2x.png");
+    background: $base-color url("../../img/catalog/image-1@2x.png");
     background-size: cover;
     background-repeat: no-repeat;
   }
 
   @media (min-width: $table-width) {
     display: flex;
-    background: $base-color url("../../img/catalog/image\ 2.png");
+    background: $base-color url("../../img/catalog/image-2.png");
     align-content: center;
     min-height: 200px;
     background-size: cover;
@@ -168,7 +168,7 @@
     justify-content: flex-end;
 
     @media (min-resolution: 2dppx) {
-      background: $base-color url("../../img/catalog/image\ 2@2x.png");
+      background: $base-color url("../../img/catalog/image-2@2x.png");
       background-size: contain;
       background-repeat: no-repeat;
     }
@@ -180,7 +180,7 @@
     flex-wrap: wrap;
     align-content: flex-end;
     min-height: 204px;
-    background: $base-color url("../../img/catalog/image\ 1.png");
+    background: $base-color url("../../img/catalog/image-1.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
