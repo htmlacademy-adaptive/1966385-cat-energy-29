@@ -1,0 +1,1 @@
+let buttonTog=document.querySelector(".main-nav__toggle"),navigation=document.querySelector(".site-list");buttonTog.onclick=function(){navigation.classList.toggle("site-list--hidden"),buttonTog.classList.toggle("main-nav__toggle--open")};
