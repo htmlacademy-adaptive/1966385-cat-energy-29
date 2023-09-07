@@ -12,7 +12,7 @@
     width: 100%;
     left: 50%;
     transform: translateX(-50%);
-    background-image: url("../../img/hero-block/index-background-mobile\ 2.png");
+    background-image: url("../../img/hero-block/index-background-mobile\ 2.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -40,14 +40,7 @@
       display: none;
     }
   }
-
-  @media (min-width: $desktop-width) {
-    background-image: url("../../img/hero-block/hero-background-desctop.jpg");
-    background-position: right;
-    margin-bottom: 52px;
-  }
 }
-
 
 .hero-block__title {
   display: flex;

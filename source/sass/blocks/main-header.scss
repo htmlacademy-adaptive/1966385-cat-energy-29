@@ -32,9 +32,14 @@
       width: 720px;
       height: 694px;
       top: 0;
-      background-image: url("../../img/hero-block/index-background-desktop\ 1.png");
+      background-image: url("../../img/hero-block/index-background-desktop\ 1.webp");
       background-repeat: no-repeat;
-      z-index: -2;
+      z-index: 1;
+
+      @media (min-resolution: 2dppx) {
+        content: "";
+        background-image: url("../../img/hero-block/index-background-desktop\ 1@2x.webp");
+      }
     }
 
     &::after {
@@ -66,6 +71,14 @@
     width: 70px;
     height: 59px;
   }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .main-header__icon-logo {
@@ -78,6 +91,14 @@
     display: flex;
     position: relative;
   }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .main-nav {
@@ -89,6 +110,11 @@
 
   @media (min-width: $table-width) {
     display: flex;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: transparent;
+    z-index: 3;
   }
 }
 
@@ -103,9 +129,10 @@
 .main-nav__list-link {
   color: $standard-black;
   text-decoration: none;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", sans-serif, "Arial";
   font-size: 20px;
   font-style: normal;
+  font-display: swap;
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
@@ -127,5 +154,13 @@
 
   &--open {
     background-image: url("../../img/header/header-nav-close.svg");
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

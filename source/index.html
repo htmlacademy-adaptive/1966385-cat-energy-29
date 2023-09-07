@@ -5,10 +5,12 @@
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="./fonts/lato/Lato-Regular.woff2" as="font/woff2">
+  <link rel="preload" href="./fonts/oswald/oswaldregular.woff2" as="font/woff2">
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/favicon152x152.webp">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/faviconы/favicon32x32.webp">
-  <link rel="icon" type="image/png" sizes="16x16" href="img/faviconы/favicon16x16.webp">
+  <link rel="icon" type="image/webp" sizes="32x32" href="img/faviconы/favicon32x32.webp">
+  <link rel="icon" type="image/webp" sizes="16x16" href="img/faviconы/favicon16x16.webp">
   <link rel="manifest" href="manifest.webmanifest">
 </head>
 
@@ -63,11 +65,12 @@
           srcset="./img/index/index-can-tablet@1x.webp 1x, ./img/index/index-can-tablet@2x.webp 2x">
         <source type="image/webp"
           srcset="./img/index/index-can-mobile@1x.webp 1x, ./img/index/index-can-mobile@2x.webp 2x">
-        <source media="(min-width: 1200px)" srcset="./img/index/index-can-desktop@1x.png">
+        <source media="(min-width: 1200px)" srcset="./img/index/index-can-desktop@1x.webp">
         <source media="(min-width: 768px)"
-          srcset="./img/index/index-can-tablet@1x.png 1x, ./img/index/index-can-tablet@2x.png 2x">
-        <img class="hero-block__image" src="./img/index/index-can-mobile@1x.png"
-          srcset="./img/index/index-can-mobile@2x.png 2x" alt="Изображение баночки Cat Energy" width="280" height="270">
+          srcset="./img/index/index-can-tablet@1x.webp 1x, ./img/index/index-can-tablet@2x.webp 2x">
+        <img class="hero-block__image" src="./img/index/index-can-mobile@1x.webp"
+          srcset="./img/index/index-can-mobile@2x.webp 2x" alt="Изображение баночки Cat Energy" width="280"
+          height="270">
       </picture>
       <a href="#" class="hero-block__link">подобрать программу</a>
     </section>
@@ -123,9 +126,9 @@
         </li>
       </ol>
     </section>
-    <section class="example__wrapper">
+    <section class="example">
       <div class="example__desktop">
-        <div class="example">
+        <div class="example__wrapper">
           <h2 class="example__title">Живой пример</h2>
           <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
             Slim. Отличный результат без изнуряющих
@@ -172,7 +175,7 @@
     </section>
   </main>
   <footer class="main-footer">
-    <div class="footer__wrapper">
+    <div class="main-footer__wrapper">
       <a href="#" class="main-footer__logo-link">
         <span class="visually-hidden">Логотип Cat Energy</span>
       </a>
@@ -181,7 +184,7 @@
           <li class="main-footer__social-item">
             <a href="https://vk.com/htmlacademy" class="main-footer__social-vk">
               <svg xmlns="http://www.w3.org/2000/svg" width="28" height="22" fill="none" viewBox="0 0 28 22">
-                <use xlink:href="img/sprite.svg#icon-vk"></use>
+                <use class="main-footer__socail-icon" xlink:href="img/sprite.svg#icon-vk"></use>
               </svg>
               <span class="visually-hidden">Мы Вконтакте</span>
             </a>
@@ -189,7 +192,7 @@
           <li class="main-footer__social-item ">
             <a href="https://www.youtube.com/user/htmlacademyru" class="main-footer__social-yt">
               <svg xmlns="http://www.w3.org/2000/svg" width="28" height="22" fill="none" viewBox="0 0 28 22">
-                <use xlink:href="img/sprite.svg#icon-yt"></use>
+                <use class="main-footer__socail-icon" xlink:href="img/sprite.svg#icon-yt"></use>
               </svg>
               <span class="visually-hidden">Мы в ютубе</span>
             </a>
@@ -197,7 +200,7 @@
           <li class="main-footer__social-item">
             <a href="https://t.me/htmlacademy" class="main-footer__social-tg">
               <svg width="28" height="22">
-                <use xlink:href="img/sprite.svg#icon-tg"></use>
+                <use class="main-footer__socail-icon" xlink:href="img/sprite.svg#icon-tg"></use>
               </svg>
               <span class="visually-hidden">Мы в телеграм</span>
             </a>

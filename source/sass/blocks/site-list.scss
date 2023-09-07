@@ -17,6 +17,10 @@
     column-gap: 33px;
     background-color: inherit;
   }
+
+  @media (min-width: $desktop-width) {
+    z-index: 2;
+  }
 }
 
 .site-list__link {
@@ -27,7 +31,16 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
-    z-index: 3;
+    color: $standard-white;
+    position: relative;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -53,9 +66,10 @@
 }
 
 .site-list__item {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", sans-serif, "Arial";
   font-size: 20px;
   font-style: normal;
+  font-display: swap;
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
@@ -90,4 +104,8 @@
   text-underline-position: under;
   text-decoration-thickness: 2px;
   text-underline-offset: 9px;
+
+  @media (min-width: $desktop-width) {
+    text-decoration-color: $standard-white;
+  }
 }

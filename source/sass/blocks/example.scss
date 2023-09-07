@@ -1,5 +1,27 @@
 @import "../common/variables";
 
+.example {
+  padding: 20px 20px;
+  background-color: $example-bg;
+  margin-left: calc((100vw / 2 - 100% / 2) * -1);
+  margin-right: calc((100vw / 2 - 100% / 2) * -1);
+
+  @media (min-width: $table-width) {
+    padding: 0 30px 0 30px;
+    background: linear-gradient($standard-white 619px, $example-bg 619px);
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 110px 0 110px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: linear-gradient($standard-white 136px, $example-bg 136px);
+    width: 100%;
+    column-gap: 224px;
+  }
+}
+
 .example__desktop {
   display: flex;
   flex-direction: column;
@@ -37,12 +59,12 @@
 
 .example__description {
   color: $charcoal-color;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", sans-serif, "Arial";
+  font-display: swap;
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
   margin: 0 0 20px 0;
-  width: 280px;
 
   @media (min-width: $table-width) {
     width: 100%;
@@ -74,7 +96,8 @@
   display: flex;
   color: $standard-black;
   text-align: center;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", sans-serif, 'Arial';
+  font-display: swap;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
@@ -100,7 +123,8 @@
   background-color: $example-bg;
   color: $charcoal-color;
   text-align: center;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", sans-serif, "Arial";
+  font-display: swap;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -124,7 +148,8 @@
 .example__result-expenses {
   color: $standard-black;
   text-align: center;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", sans-serif, "Arial";
+  font-display: swap;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
@@ -140,7 +165,8 @@
 .example__result-expenses-number {
   color: $standard-black;
   text-align: center;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", sans-serif, "Arial";
+  font-display: swap;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
@@ -153,7 +179,7 @@
 }
 
 .examle__result-slider {
-  background-image: url("../../img/example/compare-slider-mobile.png");
+  background-image: url("../../img/example/compare-slider-mobile.webp");
   height: 256px;
   width: 100%;
   margin-top: 20px;
@@ -162,12 +188,12 @@
   background-color: $example-bg;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../../img/example/compare-slider@2x-mobile.png");
+    background-image: url("../../img/example/compare-slider@2x-mobile.webp");
     background-size: contain;
   }
 
   @media (min-width: $table-width) {
-    background-image: url("../../img/example/cat-slider-tablet.png");
+    background-image: url("../../img/example/cat-slider-tablet.webp");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -175,17 +201,17 @@
     background-color: inherit;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../../img/example/cat-slider-tablet@2x.png");
+      background-image: url("../../img/example/cat-slider-tablet@2x.webp");
       background-size: contain;
     }
   }
 
   @media (min-width: $desktop-width) {
-    background-image: url("../../img/example/compare-slider-desktop.png");
+    background-image: url("../../img/example/compare-slider-desktop.webp");
     margin-bottom: 85px;
   }
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../../img/example/compare-slider-desktop@2x.png");
+    background-image: url("../../img/example/compare-slider-desktop@2x.webp");
   }
 }

@@ -263,4 +263,8 @@
       left: 132px;
     }
   }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

@@ -52,7 +52,8 @@
 .main-footer__academy-link {
   display: flex;
   color: $charcoal-color;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", sans-serif, "Arial";
+  font-display: swap;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
