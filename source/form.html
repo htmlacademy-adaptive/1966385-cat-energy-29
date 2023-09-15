@@ -6,14 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Подбор программы Cat Energy</title>
   <link rel="stylesheet" href="./css/style.min.css">
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicons/favicon32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicons/favicon16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="./img/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 
 <body class="page__body">
 
-  <header class="main-header main-header__hero-bg main-header__mobile">
+  <header class="main-header main-header__hero-bg main-header__mobile main-header__no-background">
     <div class="wrapper">
-      <a href="#" class="main-header__logo">
+      <a href="index.html" class="main-header__logo">
         <picture>
           <source media="(min-width: 1440px)" srcset="./img/header/logo-pic-desctop.svg">
           <source media="(min-width: 768px)" srcset="./img/header/logo-pic-tablet.svg">
@@ -21,7 +28,7 @@
             height="38">
         </picture>
         <svg class="main-header__icon-logo" width="101" height="18">
-          <use xlink:href="img/sprite.svg#icon-logo"></use>
+          <use xlink:href="img/sprite.svg#logo-text"></use>
         </svg>
       </a>
     </div>
@@ -31,17 +38,18 @@
       </button>
       <ul class="main-nav__list site-list site-list--hidden">
         <li class="site-list__item">
-          <a class="site-list__link site-list__link-index site-list__link--current" href="index.html">
+          <a class="site-list__link site-list__link-index site-list__link-catalog" href="index.html">
             Главная
           </a>
         </li>
         <li class="site-list__item">
-          <a class="site-list__link site-list__link-index" href="catalog.html">
+          <a class="site-list__link site-list__link-index site-list__link-catalog" href="catalog.html">
             Каталог продукции
           </a>
         </li>
         <li class="site-list__item">
-          <a class="site-list__link site-list__link-index" href="form.html">
+          <a class="site-list__link site-list__link-index site-list__link-catalog site-list__link--current"
+            href="form.html">
             Подбор программы
           </a>
         </li>
@@ -58,15 +66,19 @@
           <fieldset class="main-form__program">
             <legend class="main-form__program-title">Заполните анкету, и мы подберем <br>
               программу питания для вашего кота</legend>
-            <label class="main-form__input-name">ИМЯ:*
-              <input class="main-form__input input" type="text" placeholder="барсик" required>
-            </label>
-            <label class="main-form__input-name">Вес (кг):*
-              <input class="main-form__input input" type="number" min="1" value="7" required>
-            </label>
-            <label class="main-form__input-name">Возраст (лет):
-              <input class="main-form__input input" type="number" min="1" value="7">
-            </label>
+            <div class="main-form__input-wrapper">
+              <label class="main-form__input-name">ИМЯ:*
+                <input class="main-form__input main-form__input--invalid input" type="text" placeholder="барсик"
+                  required>
+              </label>
+              <label class="main-form__input-name">Вес (кг):*
+                <input class="main-form__input main-form__input--invalid input" type="number" min="1" value="7"
+                  required>
+              </label>
+              <label class="main-form__input-name">Возраст (лет):
+                <input class="main-form__input input" type="number" min="1" value="7">
+              </label>
+            </div>
           </fieldset>
           <fieldset class="main-form__radio">
             <legend class="visually-hidden">Выбор диеты</legend>
@@ -96,48 +108,51 @@
           </fieldset>
         </div>
         <fieldset class="main-form__program-owner">
-          <legend class="main-form__contakt-title main-form__title">Контактные данные (владельца кота)</legend>
-          <div class="main-form__input-wrapper">
+          <legend class="main-form__title--second main-form__title">Контактные данные (владельца кота)</legend>
+          <div class="main-form__contact-wrapper">
             <label class="main-form__input-name">E-mail:*
-              <input class="main-form__program-owner-input input" type="email" placeholder="kuklachev@gmail.com"
-                required>
+              <input class="main-form__program-owner-input main-form__input--invalid input" type="email"
+                placeholder="kuklachev@gmail.com" required>
+              <span class="main-form__program-owner-email"></span>
             </label>
             <label class="main-form__input-name">Телефон:*
-              <input class="main-form__program-owner-input main-form__program-owner-phone input" type="tel"
+              <input class="main-form__program-owner-input main-form__input--invalid input" type="tel"
                 placeholder="8 (960) 900-60-90" required>
+              <span class="main-form__program-owner-phone"></span>
             </label>
           </div>
         </fieldset>
         <fieldset class="main-form__comments">
-          <legend class="main-form__comments-title main-form__title">Комментарий</legend>
-          <textarea class="main-form__comments-input input" type="text">Расскажите обо всех повадках кота</textarea>
+          <legend class="main-form__comments-title">Комментарий</legend>
+          <textarea
+            class="main-form__comments-input main-form__input--invalid input">Расскажите обо всех повадках кота</textarea>
         </fieldset>
         <fieldset class="main-form__extra">
-          <legend class="main-form__extra-title main-form__title">Дополнительно</legend>
+          <legend class="main-form__addictional-title">Дополнительно</legend>
           <ul class="main-form__extra-list">
             <li class="main-form__extra-item">
-              <label class="control">
+              <label class="control control-addiction">
                 <input class="control-item visually-hidden" type="checkbox" name="sweetener" checked>
                 <span class="control-mark-ckeckbox"></span>
                 <span class="control-label">сахарозаменитель</span>
               </label>
             </li>
             <li class="main-form__extra-item">
-              <label class="control">
+              <label class="control control-addiction">
                 <input class="control-item visually-hidden" name="drink water" type="checkbox">
                 <span class="control-mark-ckeckbox"></span>
                 <span class="control-label">питьевая вода</span>
               </label>
             </li>
             <li class="main-form__extra_item">
-              <label class="control">
+              <label class="control control-addiction">
                 <input class="control-item visually-hidden" name="milk" type="checkbox">
                 <span class="control-mark-ckeckbox"></span>
                 <span class="control-label">молоко</span>
               </label>
             </li>
             <li class="main-form__extra_item">
-              <label class="control">
+              <label class="control control-addiction">
                 <input class="control-item visually-hidden" name="vitamins" type="checkbox">
                 <span class="control-mark-ckeckbox"></span>
                 <span class="control-label">витамины</span>
@@ -146,7 +161,7 @@
           </ul>
         </fieldset>
         <div class="main-form__input-important">
-          <button class="main-form__button" type="submit">отправить заявку</button>
+          <button class="main-form__button main-form__button--second" type="submit">отправить заявку</button>
           <span class="main-form__description">* — Обязательные поля</span>
         </div>
       </section>
@@ -154,46 +169,52 @@
     <section class="cooperate">
       <div class="cooperate__text">
         <h2 class="visually-hidden">Сотрудничество</h2>
-        <div class="cooperate__wrapper">
-          <p class="cooperate__text">приглашаем к сотрудничеству дилеров!</p>
-          <address class="cooperate__description">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+        <div class="cooperate__wrapper cooperate__wrapper-catalog">
+          <p class="cooperate__text">приглашаем<br> к сотрудничеству дилеров!</p>
+          <address class="cooperate__description">ул. Большая Конюшенная, д. 19/8
+            <span class="cooperate__description-address"> Санкт-Петербург</span>
+          </address>
         </div>
       </div>
       <iframe class="cooperate__map"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d428.3238550643958!2d30.322318544068956!3d59.938632599302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sby!4v1693143483181!5m2!1sru!2sby"
         width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade">
-        <title>место нахождение магазина</title>
+        <title>место нахождения магазина></title>
       </iframe>
     </section>
   </main>
   <footer class="main-footer">
-    <div class="footer__wrapper">
+    <div class="main-footer__wrapper main-footer__wrapper-catalog">
       <a href="#" class="main-footer__logo-link">
-        <span class="visually-hidden">Логотип Cat Energy</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 24">
+          <use xlink:href="img/sprite.svg#footer-logo"></use>
+        </svg>
       </a>
       <div class="main-footer__social">
         <ul class="main-footer__social-list">
           <li class="main-footer__social-item">
-            <a href="https://vk.com/htmlacademy" class="main-footer__social-vk">
+            <a href="https://vk.com/htmlacademy" class="main-footer__social-link main-footer__social-vk">
               <svg xmlns="http://www.w3.org/2000/svg" width="28" height="22" fill="none" viewBox="0 0 28 22">
-                <use xlink:href="img/sprite.svg#icon-vk"></use>
+                <use class="main-footer__social-icon" xlink:href="img/sprite.svg#vkontakte"></use>
               </svg>
               <span class="visually-hidden">Мы Вконтакте</span>
             </a>
           </li>
           <li class="main-footer__social-item ">
-            <a href="https://www.youtube.com/user/htmlacademyru" class="main-footer__social-yt">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="22" fill="none" viewBox="0 0 28 22">
-                <use xlink:href="img/sprite.svg#icon-yt"></use>
+            <a href="https://www.youtube.com/user/htmlacademyru"
+              class="main-footer__social-link main-footer__social-yt">
+              <svg class="main-footer__socail-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="22"
+                viewBox="0 0 28 22">
+                <use xlink:href="img/sprite.svg#youtube"></use>
               </svg>
               <span class="visually-hidden">Мы в ютубе</span>
             </a>
           </li>
           <li class="main-footer__social-item">
-            <a href="https://t.me/htmlacademy" class="main-footer__social-tg">
+            <a href="https://t.me/htmlacademy" class="main-footer__social-link main-footer__social-tg">
               <svg width="28" height="22">
-                <use xlink:href="img/sprite.svg#icon-tg"></use>
+                <use class="main-footer__social-icon" xlink:href="img/sprite.svg#telegram"></use>
               </svg>
               <span class="visually-hidden">Мы в телеграм</span>
             </a>
@@ -204,7 +225,7 @@
         <a class="main-footer__academy-link" href="#">
           HTML-Academy
           <svg class="main-footer__academy-logo" width="28" height="34" viewBox="0 0 28 34">
-            <use xlink:href="img/sprite.svg#icon-html"></use>
+            <use xlink:href="img/sprite.svg#htmlacademy"></use>
           </svg>
         </a>
       </div>

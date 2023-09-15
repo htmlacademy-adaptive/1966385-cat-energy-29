@@ -1,13 +1,13 @@
 @import "../common/variables";
 
 .example {
-  padding: 20px 20px;
+  padding: 25px 20px 40px;
   background-color: $example-bg;
-  margin-left: calc((100vw / 2 - 100% / 2) * -1);
-  margin-right: calc((100vw / 2 - 100% / 2) * -1);
+  // margin-left: calc((100vw / 2 - 100% / 2) * -1);
+  // margin-right: calc((100vw / 2 - 100% / 2) * -1);
 
   @media (min-width: $table-width) {
-    padding: 0 30px 0 30px;
+    padding: 0 30px 107px;
     background: linear-gradient($standard-white 619px, $example-bg 619px);
   }
 
@@ -17,7 +17,6 @@
     flex-direction: row;
     justify-content: space-between;
     background: linear-gradient($standard-white 136px, $example-bg 136px);
-    width: 100%;
     column-gap: 224px;
   }
 }
@@ -29,20 +28,19 @@
 
   @media (min-width: $table-width) {
     background-color: $standard-white;
-    margin-left: calc((100vw / 2 - 100% / 2) * -1);
-    margin-right: calc((100vw / 2 - 100% / 2) * -1);
     padding: 0 30px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 50%;
+    width: 74vw;
     background: linear-gradient($standard-white 136px, $example-bg 136px);
+    padding: 0;
   }
 }
 
 .example__title {
   color: $standard-black;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 36px;
   font-weight: 400;
   line-height: 40px;
@@ -53,13 +51,17 @@
   @media (min-width: $table-width) {
     font-size: 60px;
     line-height: 60px;
-    margin: 45px auto 60px 0;
+    margin: 47px auto 60px 0;
+  }
+
+  @media (min-width:$desktop-width) {
+    margin: 70px auto 0;
   }
 }
 
 .example__description {
   color: $charcoal-color;
-  font-family: "Lato", sans-serif, "Arial";
+  font-family: "Lato", "Arial", sans-serif;
   font-display: swap;
   font-size: 14px;
   font-weight: 400;
@@ -70,18 +72,28 @@
     width: 100%;
     font-size: 16px;
     line-height: 24px;
-    margin: 0 0 55px 0;
+    margin: 0 0 54px;
   }
 
   @media (min-width: $desktop-width) {
-    margin: 70px auto 70px 0;
+    margin: 145px auto 44px 0;
   }
 }
 
 .example__result {
-  gap: 32px;
+  column-gap: 32px;
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: $table-width) {
+    column-gap: 43px;
+  }
+
+  @media (min-width:$desktop-width) {
+    column-gap: 41px;
+    margin-top: 24px;
+    justify-content: flex-start;
+  }
 }
 
 .example__result-weight,
@@ -96,14 +108,14 @@
   display: flex;
   color: $standard-black;
   text-align: center;
-  font-family: "Oswald", sans-serif, 'Arial';
+  font-family: "Oswald", "Arial", sans-serif;
   font-display: swap;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
   min-width: 124px;
-  min-height: 64px;
+  min-height: 56px;
   align-items: center;
   justify-content: center;
   outline: 1px solid #cdcdcd;
@@ -114,7 +126,7 @@
     font-size: 30px;
     line-height: 37px;
     min-width: 162px;
-    min-height: 77px;
+    min-height: 71px;
   }
 }
 
@@ -123,13 +135,13 @@
   background-color: $example-bg;
   color: $charcoal-color;
   text-align: center;
-  font-family: "Lato", sans-serif, "Arial";
+  font-family: "Lato", "Arial", sans-serif;
   font-display: swap;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 100%;
-  min-width: 77px;
+  width: 77px;
   top: -10px;
 
   @media (min-width: $table-width) {
@@ -137,7 +149,8 @@
     line-height: 14px;
     background-color: $standard-white;
     top: -8px;
-    min-width: 96px;
+    min-width: 125px;
+    width: auto;
   }
 
   @media (min-width: $desktop-width) {
@@ -148,7 +161,7 @@
 .example__result-expenses {
   color: $standard-black;
   text-align: center;
-  font-family: "Oswald", sans-serif, "Arial";
+  font-family: "Oswald", "Arial", sans-serif;
   font-display: swap;
   font-size: 14px;
   font-weight: 400;
@@ -165,7 +178,7 @@
 .example__result-expenses-number {
   color: $standard-black;
   text-align: center;
-  font-family: "Oswald", sans-serif, "Arial";
+  font-family: "Oswald", "Arial", sans-serif;
   font-display: swap;
   font-size: 14px;
   font-weight: 400;
@@ -179,7 +192,7 @@
 }
 
 .examle__result-slider {
-  background-image: url("../../img/example/compare-slider-mobile.webp");
+  background-image: url("../../img/example/compare-slider-mobile.png");
   height: 256px;
   width: 100%;
   margin-top: 20px;
@@ -188,30 +201,34 @@
   background-color: $example-bg;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../../img/example/compare-slider@2x-mobile.webp");
+    background-image: url("../../img/example/compare-slider@2x-mobile.png");
     background-size: contain;
   }
 
   @media (min-width: $table-width) {
-    background-image: url("../../img/example/cat-slider-tablet.webp");
+    background-image: url("../../img/example/cat-slider-tablet.png");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
-    min-height: 712px;
     background-color: inherit;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../../img/example/cat-slider-tablet@2x.webp");
-      background-size: contain;
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    background-image: url("../../img/example/compare-slider-desktop.webp");
-    margin-bottom: 85px;
+    min-height: 506px;
+    margin-top: 92px;
   }
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../../img/example/compare-slider-desktop@2x.webp");
+    background-image: url("../../img/example/cat-slider-tablet@2x.png");
+    background-size: contain;
+  }
+
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../../img/example/compare-slider-desktop.png");
+    margin: 70px 211px 0 auto;
+    width: 100%;
+    height: 512px;
+    background-size: inherit;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/example/compare-slider-desktop@2x.png");
   }
 }

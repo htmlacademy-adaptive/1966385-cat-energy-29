@@ -6,17 +6,17 @@
   position: relative;
   justify-content: space-between;
   min-height: 63px;
-  padding: 13px 20px 14px 20px;
+  padding: 0 20px 0 20px;
   background-color: $standard-white;
   align-items: center;
 
   @media (min-width: $table-width) {
     display: flex;
-    padding: 25px 30px 25px 30px;
+    padding: 19px 34px 25px 30px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 55px 100px 55px 110px;
+    padding: 55px 110px;
   }
 }
 
@@ -32,13 +32,13 @@
       width: 720px;
       height: 694px;
       top: 0;
-      background-image: url("../../img/hero-block/index-background-desktop\ 1.webp");
+      background-image: url("../../img/hero-block/index-background-desktop\ 1.png");
       background-repeat: no-repeat;
       z-index: 1;
 
       @media (min-resolution: 2dppx) {
         content: "";
-        background-image: url("../../img/hero-block/index-background-desktop\ 1@2x.webp");
+        background-image: url("../../img/hero-block/index-background-desktop\ 1@2x.png");
       }
     }
 
@@ -56,9 +56,34 @@
   }
 }
 
+.main-header__no-background {
+  &::before {
+    display: none;
+  }
+
+  &::after {
+    border-bottom: 1px solid #d9d9d9;
+    position: absolute;
+    display: block;
+    flex-grow: 1;
+    content: "";
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: -3px;
+  }
+
+  @media (min-width:$table-width) {
+    &::after {
+      display: none;
+    }
+  }
+}
+
 .main-header__logo {
   display: flex;
   flex-direction: row;
+  color: $standard-black;
 }
 
 .main-header__logo-image {
@@ -90,6 +115,7 @@
   @media (min-width: $table-width) {
     display: flex;
     position: relative;
+    left: 39%;
   }
 
   &:hover {
@@ -98,6 +124,11 @@
 
   &:active {
     opacity: 0.6;
+  }
+
+  @media (min-width:$desktop-width) {
+    width: 118px;
+    height: 23px;
   }
 }
 
@@ -129,7 +160,7 @@
 .main-nav__list-link {
   color: $standard-black;
   text-decoration: none;
-  font-family: "Oswald", sans-serif, "Arial";
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 20px;
   font-style: normal;
   font-display: swap;
@@ -143,7 +174,7 @@
   background-repeat: no-repeat;
   border: none;
   width: 24px;
-  height: 21px;
+  height: 24px;
   background-color: $standard-white;
   cursor: pointer;
 

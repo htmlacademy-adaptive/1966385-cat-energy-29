@@ -16,85 +16,160 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+
+  @media (min-width:$desktop-width) {
+    width: 100%;
+  }
 }
 
 .catalog-additional__title {
-  font-family: "Oswald", sans-serif, "Arial";
+  position: relative;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-display: swap;
   font-weight: 400;
   line-height: 24px;
-  margin: 26px 0 36px 0;
+  margin: 24px 0 49px;
   text-align: start;
+  z-index: 2;
+
+  &::before {
+    border-bottom: 2px solid $apple-color;
+    position: absolute;
+    display: block;
+    flex-grow: 1;
+    content: "";
+    height: 1px;
+    width: calc(100% - 226px);
+    bottom: 8px;
+    right: -20px;
+    z-index: 1;
+  }
+
+  &::after {
+    border-bottom: 1px solid $special-grey;
+    position: absolute;
+    display: block;
+    flex-grow: 1;
+    content: "";
+    height: 1px;
+    width: 100%;
+    bottom: -36px;
+  }
 
   @media (min-width: $table-width) {
-    font-size: 26px;
-    line-height: 26px;
-    margin: 70px 0 80px 0;
+    font-size: 36px;
+    line-height: 36px;
+    margin: 20px 0 80px 40px;
+
+    &::before {
+      width: calc(100% - 348px);
+      bottom: 12px;
+      right: -30px;
+    }
+
+    &::after {
+      border-bottom: 2px solid $apple-color;
+      position: absolute;
+      display: block;
+      flex-grow: 1;
+      content: "";
+      height: 1px;
+      width: calc(100% - 638px);
+      bottom: 12px;
+      left: -70px;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    margin: 78px 0 80px 0;
+    margin: 75px 0 80px;
     font-size: 36px;
     line-height: 36px;
+
+    &::before {
+      width: calc(100% - 267px);
+      bottom: 11px;
+      right: -110px;
+    }
+
+    &::after {
+      left: -110px;
+      width: 70px;
+      bottom: 11px;
+    }
   }
+
 }
 
 .catalog-additional__item {
+  position: relative;
   min-height: 130px;
+
+  &::after {
+    border-bottom: 1px solid $special-grey;
+    position: absolute;
+    display: block;
+    flex-grow: 1;
+    content: "";
+    height: 1px;
+    width: 100%;
+    bottom: 14px;
+  }
 
   @media (min-width: $table-width) {
     outline: 1px solid $special-grey;
-    padding: 27px 38px;
+    padding: 24px 38px 28px;
     min-height: auto;
+
+    &::after {
+      display: none;
+    }
   }
 
   @media (min-width: $desktop-width) {
     padding: 15px 0 17px;
     display: flex;
-  }
-
-  &:last-child {
-    border-bottom: 1px solid $special-grey;
+    justify-content: space-between;
+    column-gap: 40px;
   }
 }
 
 .catalog-additional__list-title {
   color: $standard-black;
-  font-family: "Oswald", sans-serif, "Arial";
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-display: swap;
   font-weight: 400;
   line-height: 16px;
   text-transform: uppercase;
-  margin: 0 auto 13px 0;
+  margin: 0 auto 10px 0;
 
   @media (min-width: $table-width) {
-    margin: 0;
-  }
-
-  @media (min-width: $desktop-width) {
     margin: 0 80px 0 0;
     min-width: 200px;
     font-size: 20px;
     line-height: 20px;
   }
+
+  @media (min-width:$desktop-width) {
+    margin: 0px 123px 0 0;
+  }
 }
 
 .catalog-additional__item-table {
   color: $charcoal-color;
-  font-family: "Lato", sans-serif, "Arial";
+  font-family: "Lato", "Arial", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-display: swap;
   font-weight: 400;
   line-height: 14px;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 
   @media (min-width: $table-width) {
-    margin: 0;
+    margin: 5px 38px 0 0;
   }
 }
 
@@ -105,20 +180,19 @@
   min-width: 280px;
 
   @media (min-width: $table-width) {
-    column-gap: 50px;
-    min-width: auto;
-  }
-
-  @media (min-width: $table-width) {
     display: flex;
     min-width: 263px;
-    margin-right: 40px;
-    font-family: "Lato", sans-serif, "Arial";
+    font-family: "Lato", "Arial", sans-serif;
     font-display: swap;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 20px;
+    column-gap: 50px;
+  }
+
+  @media (min-width:$desktop-width) {
+    min-width: 286px;
   }
 }
 
@@ -127,15 +201,14 @@
   display: flex;
   flex-wrap: wrap;
   align-content: flex-end;
-  min-height: 204px;
   background: $base-color url("../../img/catalog/image-1.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
   color: $standard-white;
   text-align: center;
-  padding: 186px 61px 43px 58px;
-  margin: 35px 0 0 0;
+  padding: 186px 61px 44px 58px;
+  margin: 21px 0 10px;
 
   &::before {
     position: absolute;
@@ -144,35 +217,35 @@
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
-    width: 78px;
-    height: 80px;
+    width: 80px;
+    height: 85px;
     background-image: url("../../img/catalog/icon-gift.svg");
     background-repeat: no-repeat;
 
     @media (min-width: $table-width) {
-      left: 130px;
+      left: 118px;
     }
   }
 
   @media (min-resolution: 2dppx) {
-    background: $base-color url("../../img/catalog/image-1@2x.webp");
+    background: $base-color url("../../img/catalog/image-1@2x.png");
     background-size: cover;
     background-repeat: no-repeat;
   }
 
   @media (min-width: $table-width) {
     display: flex;
-    background: $base-color url("../../img/catalog/image-2.webp");
+    background: $base-color url("../../img/catalog/image-2.png");
     align-content: center;
     min-height: 200px;
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 0 121px 0 760px;
+    padding: 0 125px 75px 420px;
     margin: 70px 0 0 0;
     justify-content: flex-end;
 
     @media (min-resolution: 2dppx) {
-      background: $base-color url("../../img/catalog/image-2@2x.webp");
+      background: $base-color url("../../img/catalog/image-2@2x.png");
       background-size: contain;
       background-repeat: no-repeat;
     }
@@ -184,7 +257,7 @@
     flex-wrap: wrap;
     align-content: flex-end;
     min-height: 204px;
-    background: $base-color url("../../img/catalog/image-1.webp");
+    background: $base-color url("../../img/catalog/image-1.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
@@ -213,7 +286,7 @@
 .catalog-additional__gift-title {
   color: $standard-white;
   text-align: center;
-  font-family: "Lato", sans-serif, "Arial";
+  font-family: "Lato", "Arial", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-display: swap;
@@ -226,8 +299,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 185px 42px 42px 42px;
+    padding: 186px 0 41px;
     text-align: center;
+    min-width: 245px;
   }
 }
 

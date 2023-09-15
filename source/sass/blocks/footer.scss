@@ -1,17 +1,64 @@
 .main-footer__logo-link {
-  background-image: url("../img/footer/footer-logo.svg");
-  background-repeat: no-repeat;
-  display: flex;
+  position: relative;
+  display: block;
   min-width: 128px;
   height: 24px;
   justify-content: center;
   align-items: center;
+  color: $shade-black;
+
+  &::after {
+    border-bottom: 1px solid $special-grey;
+    position: absolute;
+    display: block;
+    flex-grow: 1;
+    content: "";
+    height: 1px;
+    width: calc(100% + 152px);
+    bottom: -19px;
+  }
+
+  @media (min-width: $table-width) {
+    &::after {
+      display: none;
+    }
+
+    &:hover {
+      color: $hover-logo;
+    }
+
+    &:active {
+      color: $active-logo;
+    }
+  }
 }
 
 .main-footer__social {
+  position: relative;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+
+  &::after {
+    border-bottom: 1px solid $special-grey;
+    position: absolute;
+    display: block;
+    flex-grow: 1;
+    content: "";
+    height: 1px;
+    width: calc(100% + 152px);
+    bottom: -19px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+
+  @media (min-width:$table-width) {
+    margin-left: 36px;
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .main-footer__social-list {
@@ -28,14 +75,36 @@
 
 .main-footer__social-item {
   width: 28px;
+  height: 34px;
+}
+
+.main-footer__social-link {
+  display: block;
+  width: 28px;
   height: 22px;
+  color: $charcoal-color;
+
+  &:hover {
+    color: $base-color;
+  }
+
+  &:active {
+    color: $base-color;
+    opacity: 0.3;
+  }
+}
+
+.main-footer__social-icon {
+  display: block;
+  color: inherit;
 }
 
 .main-footer__academy {
-  min-width: 280px;
+  width: 100%;
 
-  @media (min-width: $table-width) {
-    min-width: 168px;
+  @media(min-width: $table-width) {
+    min-width: 164px;
+    width: auto;
   }
 }
 
@@ -50,9 +119,10 @@
 
 
 .main-footer__academy-link {
+  position: relative;
   display: flex;
   color: $charcoal-color;
-  font-family: "Lato", sans-serif, "Arial";
+  font-family: "Lato", "Arial", sans-serif;
   font-display: swap;
   font-size: 16px;
   font-style: normal;
@@ -62,15 +132,34 @@
   align-items: center;
   justify-content: space-between;
 
+  &:focus-visible {
+    opacity: 1;
+  }
+
   &:active {
-    opacity: 30%;
+    opacity: 0.3;
   }
 }
 
 .main-footer__academy-logo {
-  height: 27px;
+  width: 27px;
+  height: 34px;
+  color: $charcoal-color;
 
   @media (min-width: $table-width) {
     position: static;
+
+    &:hover,
+    :active {
+      color: $base-color;
+    }
   }
+}
+
+.main-footer__academy-link:focus-visible+.main-footer__academy-logo {
+  color: $base-color;
+}
+
+.main-footer__academy-link:active+.main-footer__academy-logo {
+  color: $base-color;
 }
