@@ -1,4 +1,4 @@
-.catalog__production {
+.catalog-production {
   display: flex;
   flex-direction: column;
 
@@ -7,8 +7,10 @@
   }
 }
 
-.catalog__production-title {
-  margin: 27px 41px 41px 20px;
+.catalog-production__title {
+  position: relative;
+  padding: 30px 41px 16px 20px;
+  margin: 0;
   color: $standard-black;
   font-family: "Oswald", sans-serif;
   font-size: 36px;
@@ -21,50 +23,95 @@
     font-size: 60px;
     line-height: 60px;
     text-align: left;
+    padding: 33px 41px 16px 30px;
+    margin-bottom: 49px;
   }
 
   @media (min-width: $desktop-width) {
-    margin: 67px auto 84px 0;
+    padding: 15px 41px 16px 0px;
   }
 }
 
-.catalog__production-list {
+.catalog-production__list {
   list-style-type: none;
-  margin: 0 20px;
-  padding: 0;
+  margin: 0;
+  padding: 0 20px;
 
   @media (min-width: $table-width) {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(324px, 1fr));
-    column-gap: 60px;
-    row-gap: 60px;
+    column-gap: 40px;
+    row-gap: 42px;
   }
 
   @media (min-width: $desktop-width) {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
     column-gap: 80px;
-    row-gap: 63px;
+    row-gap: 45px;
     margin: 0;
+    padding: 0;
   }
 }
 
-.catalog__production-item {
+.catalog-production__item {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin: 0;
+  padding: 16px 0 0;
+
+  &:first-child::before {
+    border-bottom: 1px solid #d9d9d9;
+    position: absolute;
+    display: block;
+    flex-grow: 1;
+    content: "";
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 1px;
+    top: 23px;
+  }
+
+  &::after {
+    border-bottom: 1px solid #d9d9d9;
+    position: absolute;
+    display: block;
+    flex-grow: 1;
+    content: "";
+    height: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    bottom: -25px;
+  }
+
 
   @media (min-width: $table-width) {
+    margin: 0 10px 0px;
+    padding: 0 35px 39px;
+    background: linear-gradient($standard-white 100px, $card-color 100px);
+
+    &:first-child::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (min-width:$desktop-width) {
+    padding: 16px 38px 44px;
     margin: 0;
-    min-height: 430px;
-    padding: 0 37px 40px 37px;
-    background: linear-gradient($standard-white 80px, $card-color 80px);
   }
 }
 
-.catalog__production-item-more {
+.catalog-production__item-more {
+  padding: 0;
+  margin: 50px 0 0;
   display: flex;
-  padding: 25px 20px;
   flex-direction: column;
   align-items: center;
 
@@ -72,14 +119,22 @@
     margin: 0;
     outline: 2px solid $card-color;
     background: $standard-white;
-    padding: 50px 20px 40px 20px;
+    margin: 103px 12px 0px 11px;
+    padding: 0;
     min-height: 429px;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    padding: 50px 35px 0;
+  }
+
+  @media (min-width:$desktop-width) {
+    margin: 100px 0px 0 0px;
+    padding: 48px 38px 0;
+    min-height: 0;
   }
 }
 
-.catalog__production-link-more {
+.catalog-production__link-more {
   content: "";
   width: 30px;
   height: 30px;
@@ -92,23 +147,44 @@
     width: 60px;
     height: 60px;
     background-repeat: no-repeat;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
-.catalog__production-link {
+.catalog-production__link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 140px;
-  height: 107px;
+  width: 50%;
+  height: auto;
 
   @media (min-width: $table-width) {
     width: 200px;
     height: 210px;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  @media (min-width:$desktop-width) {
+    width: 161px;
+    height: 172px;
   }
 }
 
-.catalog__production-image {
+.catalog-production__image {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -120,29 +196,30 @@
     height: 206px;
     box-sizing: border-box;
   }
+
 }
 
-.catalog__production-image-low {
+.catalog-production__image-low {
   @media (min-width: $table-width) {
     padding: 14px 3px;
   }
 }
 
-.catalog__production-info {
+.catalog-production__info {
   display: flex;
   flex-direction: column;
-  gap: 18px;
-  width: 140px;
+  gap: 9px;
+  width: 50%;
 
   @media (min-width: $table-width) {
     width: 100%;
   }
 }
 
-.catalog__production__item-title {
-  margin: 23px 0 8px 0;
+.catalog-production__item-title {
+  margin: 3px 42px 0 0;
   padding: 0;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -153,14 +230,26 @@
     font-size: 20px;
     line-height: 24px;
     text-align: center;
-    margin: 20px 25px;
+    margin: 20px 53px 5px;
+  }
+
+  @media (min-width:$desktop-width) {
+    margin: 30px 5px 12px;
   }
 }
 
-.catalog__production__table {
+.catalog-production__item-title--more {
+  margin: 24px 0 0;
+
+  @media (min-width:$table-width) {
+    margin: 41px auto 18px;
+  }
+}
+
+.catalog-production__table {
   color: $charcoal-color;
   text-align: center;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -172,10 +261,11 @@
     row-gap: 10px;
     font-size: 16px;
     line-height: 20px;
+    margin-bottom: 18px;
   }
 }
 
-.catalog__production-table-item {
+.catalog-production__table-item {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -188,14 +278,24 @@
   }
 }
 
-.catalog__production__item-description-more {
+.catalog-production__item-description-more {
   position: relative;
   color: $charcoal-color;
   text-align: center;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 16px;
-  margin: 0 0 21px 0;
+  margin: 8px 0 21px;
+
+  @media (min-width:$table-width) {
+    font-size: 16px;
+    line-height: 18px;
+    margin: 8px 20px 82px;
+  }
+
+  @media (min-width:$desktop-width) {
+    margin: 8px auto 92px;
+  }
 }

@@ -10,7 +10,7 @@ import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
-import { deleteSync } from 'del';
+import del from 'del';
 import browser from 'browser-sync';
 
 // Styles
@@ -65,7 +65,7 @@ export const createWebp = () => {
 }
 
 //SVG
-const svg = () => {
+export const svg = () => {
   return gulp.src('source/img/**/*.svg')
     .pipe(svgo({
       plugins: [
@@ -98,10 +98,9 @@ const copy = (done) => {
 }
 
 //Clean
-const clean = (done) => {
-  deleteSync('build');
-  done();
-}
+export const clean = () => {
+  return del('build');
+};
 
 // Server
 const server = (done) => {
@@ -113,6 +112,13 @@ const server = (done) => {
     notify: false,
     ui: false,
   });
+  done();
+}
+
+// Reload
+
+const reload = (done) => {
+  browser.reload();
   done();
 }
 

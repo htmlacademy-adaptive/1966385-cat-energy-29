@@ -11,7 +11,7 @@
   cursor: pointer;
   color: $standard-white;
   text-align: center;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial," sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -20,13 +20,42 @@
   margin-bottom: 21px;
   width: 100%;
 
+  &:hover {
+    background-color: $hover-button;
+  }
+
+  &:active {
+    opacity: 0.3;
+    background-color: $hover-button;
+  }
+
   @media (min-width: $table-width) {
     margin: 0;
     width: 50%;
   }
 }
 
-.catalog__production-button {
+.main-form__button--second {
+  padding: 10px 44px;
+
+  @media (min-width:$table-width) {
+    padding: 14px 60px;
+    width: 42%;
+    margin: 0 0 0 15px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    text-transform: uppercase;
+  }
+
+  @media (min-width:$desktop-width) {
+    width: 47%;
+    margin: 0;
+  }
+}
+
+.catalog-production__button {
   display: flex;
   height: 40px;
   justify-content: center;
@@ -34,7 +63,7 @@
   color: $standard-white;
   background-color: $base-color;
   text-align: center;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -46,17 +75,26 @@
   @media (min-width: $desktop-width) {
     padding: 8px 26px;
     height: auto;
+
+    &:hover {
+      background-color: $hover-button;
+    }
+
+    &:active {
+      opacity: 0.3;
+      background-color: $hover-button;
+    }
   }
 }
 
-.catalog__production-button--more {
+.catalog-production__button--more {
   display: flex;
   justify-content: center;
   align-items: center;
   color: $charcoal-color;
   background-color: $card-color;
   text-align: center;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -65,6 +103,15 @@
   border: none;
   cursor: pointer;
   width: 100%;
+
+  &:hover {
+    background-color: $hover-second-button;
+  }
+
+  &:active {
+    opacity: 0.3;
+    background-color: $hover-second-button;
+  }
 }
 
 .catalog-addiction__button {

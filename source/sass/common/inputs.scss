@@ -1,10 +1,11 @@
 /* input text */
 
 .main-form__input-name {
+  position: relative;
   display: flex;
   align-items: center;
   color: $charcoal-color;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -23,13 +24,13 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 100%;
+    width: 114%;
   }
 }
 
 .input {
   color: $charcoal-color;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -39,8 +40,27 @@
   margin: 0;
   border: none;
   outline: 1px solid $border-color;
-  padding: 14px 0 13px 15px;
+  padding: 15px 0 15px 15px;
   -moz-appearance: textfield;
+  cursor: pointer;
+
+  @media (min-width:$table-width) {
+    margin-right: 31px;
+    font-size: 20px;
+    padding: 10px 0 10px 20px;
+
+    &:hover {
+      outline-color: $special-grey;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $charcoal-color;
+    }
+  }
+
+  @media (min-width:$desktop-width) {
+    margin-right: 0;
+  }
 }
 
 input::-webkit-outer-spin-button,
@@ -48,15 +68,26 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
+/* input invalid
+.main-form__input--invalid {
+  outline-color: $error-color;
+}
+*/
+
 /* Radio */
 .control-label {
-  color: #222222;
-  font-family: "Oswald", sans-serif;
+  color: $nero-color;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 18px;
   text-transform: uppercase;
+
+  @media (min-width:$table-width) {
+    font-size: 20px;
+    color: $charcoal-color;
+  }
 
   @media (min-width: $desktop-width) {
     font-size: 20px;
@@ -69,6 +100,24 @@ input::-webkit-inner-spin-button {
   display: block;
   padding-left: 45px;
   cursor: pointer;
+
+  @media (min-width:$table-width) {
+    padding-left: 60px;
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  @media (min-width:$desktop-width) {
+    padding-left: 53px;
+  }
+}
+
+.control-addiction {
+  @media (min-width:$desktop-width) {
+    padding-left: 60px;
+  }
 }
 
 /* Mark */
@@ -81,6 +130,19 @@ input::-webkit-inner-spin-button {
   height: 30px;
   outline: solid 1px $special-grey;
   cursor: pointer;
+
+  &:hover {
+    outline-color: $radio-outline;
+  }
+
+  @media (min-width:$table-width) {
+    width: 40px;
+    height: 40px;
+  }
+
+  @media (min-width:$desktop-width) {
+    left: -7px;
+  }
 }
 
 input[type="radio"]~.control-mark {
@@ -97,6 +159,11 @@ input[type="radio"]:checked~.control-mark::before {
   height: 15px;
   background-color: $base-color;
   border-radius: 50%;
+
+  @media (min-width:$table-width) {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .control-mark-ckeckbox {
@@ -104,56 +171,108 @@ input[type="radio"]:checked~.control-mark::before {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 26px;
-  height: 26px;
+  width: 28px;
+  height: 29px;
   outline: solid 1px $special-grey;
   cursor: pointer;
+
+  @media (min-width:$table-width) {
+    width: 40px;
+    height: 40px;
+
+    &:hover {
+      outline: 1px solid $radio-outline;
+    }
+  }
 }
 
 input[type="checkbox"]:checked~.control-mark-ckeckbox::before {
   content: "";
+  background-repeat: no-repeat;
   position: absolute;
   width: 26px;
   height: 26px;
-  background-image: url("../img/input/tick.svg");
+  background-image: url("../../img/input/tick.svg");
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
 }
 
 .main-form__program-owner-input {
-  content: "";
-  background-image: url("../../img/input/email.svg");
-  background-repeat: no-repeat;
-  background-position: center right 12px;
+  position: relative;
+}
+
+.main-form__program-owner-email {
+  position: absolute;
+  top: 50%;
+  left: calc(100% - 32px);
+  width: 20px;
+  height: 20px;
+  transform: translateY(-50%);
+  mask-image: url("../../img/input/icon-email.svg");
+  mask-repeat: no-repeat;
+  background-color: $standard-black;
+
+  @media (min-width:$table-width) {
+    &:active {
+      background-color: $base-color;
+    }
+  }
+}
+
+.input:focus-visible+.main-form__program-owner-email {
+  background-color: $base-color;
+}
+
+.input:valid+.main-form__program-owner-email {
+  background-color: $error-color;
 }
 
 .main-form__program-owner-phone {
   content: "";
-  background-image: url("../../img/input/phone.svg");
-  background-repeat: no-repeat;
-  background-position: center right 12px;
+  position: absolute;
+  top: 50%;
+  left: calc(100% - 32px);
+  width: 20px;
+  height: 20px;
+  transform: translateY(-50%);
+  mask-image: url("../../img/input/icon-phone.svg");
+  mask-repeat: no-repeat;
+  background-color: $standard-black;
+
+  @media (min-width:$table-width) {
+    &:active {
+      background-color: $base-color;
+    }
+  }
+}
+
+.input:focus-visible+.main-form__program-owner-phone {
+  background-color: $base-color;
+}
+
+.input:valid+.main-form__program-owner-phone {
+  background-color: $error-color;
 }
 
 .main-form__comments-input {
-  display: block;
-  justify-content: center;
-  align-items: start;
-  min-height: 150px;
-  margin-bottom: 23px;
-  padding: 14px 0 0 0;
+  min-height: 135px;
+  margin-bottom: 10px;
+  padding: 16px 0 0;
   width: 100%;
   text-align: center;
 
+
   @media (min-width: $table-width) {
-    margin: 87px 0 65px 0;
-    width: 100%;
-    height: 175px;
+    margin: 9px 0 66px 16px;
+    width: 90%;
     text-align: start;
-    padding-top: 11px;
-    padding-left: 20px;
+    padding: 17px 0px 21px 19px;
   }
 
   @media (min-width: $desktop-width) {
     margin: 0;
-    padding: 9px 10px;
+    padding: 14px 100px 24px 21px;
     text-align: start;
     align-items: start;
   }
@@ -165,11 +284,12 @@ input[type="checkbox"]:checked~.control-mark-ckeckbox::before {
     flex-direction: row;
     align-items: center;
     margin: 0;
-    column-gap: 64px;
+    column-gap: 58px;
     margin-bottom: 60px;
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 80px;
+    column-gap: 74px;
   }
 }
