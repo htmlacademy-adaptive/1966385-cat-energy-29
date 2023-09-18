@@ -3,8 +3,6 @@
 .example {
   padding: 25px 20px 40px;
   background-color: $example-bg;
-  // margin-left: calc((100vw / 2 - 100% / 2) * -1);
-  // margin-right: calc((100vw / 2 - 100% / 2) * -1);
 
   @media (min-width: $table-width) {
     padding: 0 30px 107px;
