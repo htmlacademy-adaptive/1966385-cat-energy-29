@@ -17,9 +17,9 @@
   <meta name="theme-color" content="#ffffff">
 </head>
 
-<body class="page__body">
+<body class="page-body">
 
-  <header class="main-header main-header__hero-bg main-header__mobile">
+  <header class="main-header main-header--hero-bg">
     <div class="wrapper">
       <a href="#" class="main-header__logo">
         <picture>
@@ -33,13 +33,13 @@
         </svg>
       </a>
     </div>
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--closed">
       <button onclick="myFunction()" class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
       <ul class="main-nav__list site-list site-list--hidden">
         <li class="site-list__item">
-          <a class="site-list__link site-list__link-index--current site-list__link--current" href="index.html">
+          <a class="site-list__link site-list__link--index-current site-list__link--current" href="index.html">
             Главная
           </a>
         </li>
@@ -67,7 +67,7 @@
         <source type="image/webp" media="(min-width: 768px)"
           srcset="./img/index/index-can-tablet@1x.webp 1x, ./img/index/index-can-tablet@2x.webp 2x">
         <source type="image/webp"
-          srcset="./img/index/index-can-mobile@1x.png 1x, ./img/index/index-can-mobile@2x.png 2x">
+          srcset="./img/index/index-can-mobile@1x.webp 1x, ./img/index/index-can-mobile@2x.webp 2x">
         <source media="(min-width: 1200px)" srcset="./img/index/index-can-desktop@1x.png">
         <source media="(min-width: 768px)"
           srcset="./img/index/index-can-tablet@1x.png 1x, ./img/index/index-can-tablet@2x.png 2x">
@@ -137,7 +137,7 @@
             Slim. Отличный результат без изнуряющих
             тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
         </div>
-        <div class="example-result__number-wrapper">
+        <div class="example__result-number-wrapper">
           <div class="example__result">
             <div class="example__result-weight">
               <span class="example__result-number">5 кг</span>
@@ -154,27 +154,48 @@
           </div>
         </div>
       </div>
-      <div class="examle__result-slider">
-        <span class="visually-hidden">Изображение кота до</span>
-        <span class="visually-hidden">Изображение кота после</span>
+      <div class="example__result-slider">
+        <div class="example__result-image example__result-image--before">
+        </div>
+        <button class="example__button" data-button>
+        </button>
+        <span class="visually-hidden"></span>
+        <svg class="example__slider" viewBox="0 0 40 40">
+          <use xlink:href="./img/sprite.svg#slider-button">
+          </use>
+        </svg>
       </div>
     </section>
     <section class="cooperate">
       <div class="cooperate__text">
         <h2 class="visually-hidden">Сотрудничество</h2>
-        <div class="cooperate__wrapper">
+        <div class="cooperate__wrapper cooperate__index-wrapper">
           <p class="cooperate__text">приглашаем<br> к сотрудничеству дилеров!</p>
           <address class="cooperate__description">ул. Большая Конюшенная, д. 19/8
             <span class="cooperate__description-address"> Санкт-Петербург</span>
           </address>
         </div>
       </div>
-      <iframe class="cooperate__map" title="место нахождения магазина"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d428.3238550643958!2d30.322318544068956!3d59.938632599302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sby!4v1693143483181!5m2!1sru!2sby"
-        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-
-      </iframe>
+      <div class="cooperate__widget">
+        <iframe class="cooperate__map" title="место нахождения магазина"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d428.3238550643958!2d30.322318544068956!3d59.938632599302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sby!4v1693143483181!5m2!1sru!2sby"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <div class="cooperate__map-fallback">
+          <picture>
+            <source type="image/webp" media="(min-width: 1200px)"
+              srcset="img/map/map-desktop@1x.webp 1x, img/map/map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/map/map-table.webp 1x, img/map/map-table@2x.webp 2x">
+            <source type="image/webp" srcset="img/map/map-mobile.webp 1x, img/map/map-mobile@2x.webp 2x">
+            <source media="(min-width: 1200px)" srcset="img/map/map-desktop.png 1x, img/map/map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/map/map-table.png 1x, img/map/map-table@2x.png 2x">
+            <img src="img/map/map-mobile.png" srcset="img/map/map-mobile@2x.png 2x" alt="Место расположение магазина"
+              width="320" height="362">
+          </picture>
+        </div>
+      </div>
     </section>
   </main>
   <footer class="main-footer">

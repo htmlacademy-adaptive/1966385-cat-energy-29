@@ -5,16 +5,16 @@
   background-color: $example-bg;
 
   @media (min-width: $table-width) {
-    padding: 0 30px 107px;
+    padding: 0 30px 100px;
     background: linear-gradient($standard-white 619px, $example-bg 619px);
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 110px 0 110px;
+    padding: 0 110px 60px 110px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background: linear-gradient($standard-white 136px, $example-bg 136px);
+    background: linear-gradient($standard-white 204px, $example-bg 204px);
     column-gap: 224px;
   }
 }
@@ -26,12 +26,12 @@
 
   @media (min-width: $table-width) {
     background-color: $standard-white;
-    padding: 0 30px;
+    padding: 0;
   }
 
   @media (min-width: $desktop-width) {
     width: 74vw;
-    background: linear-gradient($standard-white 136px, $example-bg 136px);
+    background: linear-gradient($standard-white 204px, $example-bg 204px);
     padding: 0;
   }
 }
@@ -74,7 +74,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 145px auto 44px 0;
+    margin: 143px auto 44px 0;
+    width: 95%;
   }
 }
 
@@ -89,7 +90,6 @@
 
   @media (min-width:$desktop-width) {
     column-gap: 41px;
-    margin-top: 24px;
     justify-content: flex-start;
   }
 }
@@ -189,44 +189,98 @@
   }
 }
 
-.examle__result-slider {
-  background-image: url("../../img/example/compare-slider-mobile.png");
-  height: 256px;
-  width: 100%;
-  margin-top: 20px;
-  background-repeat: no-repeat, no-repeat;
-  background-position: center;
+.example__result-slider {
+  content: "";
+  background-image: url("../../img/example/slides-mobile.png");
+  position: relative;
+  min-width: 280px;
+  min-height: 256px;
+  margin: 0 auto;
+  display: flex;
   background-color: $example-bg;
 
+  @media (min-width:$table-width) {
+    min-width: 560px;
+    min-height: 512px;
+    background-color: transparent;
+  }
+}
+
+.example__result-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+
+  &--before {
+    z-index: 100;
+  }
+
+  &--after {
+    z-index: 101;
+  }
+
+  img {
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+  }
+}
+
+.example__result-slider {
+  content: "";
+  background-image: url("../../img/example/slides-mobile.png");
+  background-repeat: no-repeat;
+  background-position: center;
+
   @media (min-resolution: 2dppx) {
-    background-image: url("../../img/example/compare-slider@2x-mobile.png");
+    background-image: url("../../img/example/slides-mobile@2x.png");
     background-size: contain;
   }
 
-  @media (min-width: $table-width) {
-    background-image: url("../../img/example/cat-slider-tablet.png");
+  @media (min-width:$table-width) {
+    content: "";
+    background-image: url("../../img/example/slides-tablet.png");
     background-repeat: no-repeat;
-    background-position: center;
-    background-color: inherit;
-    min-height: 506px;
-    margin-top: 92px;
+    margin: 92px 0 0px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/example/slides-tablet@2x.png");
+      background-size: contain;
+    }
   }
 
-  @media (min-resolution: 2dppx) {
-    background-image: url("../../img/example/cat-slider-tablet@2x.png");
-    background-size: contain;
+  @media (min-width:$desktop-width) {
+    margin: 43px 0 0;
   }
+}
 
+.example__slider {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  z-index: 103;
+  color: $slider-gray;
+  cursor: pointer;
 
-  @media (min-width: $desktop-width) {
-    background-image: url("../../img/example/compare-slider-desktop.png");
-    margin: 70px 211px 0 auto;
-    width: 100%;
-    height: 512px;
-    background-size: inherit;
+  @media (min-width:$table-width) {
+    &:hover {
+      color: $base-color;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
   }
+}
 
-  @media (min-resolution: 2dppx) {
-    background-image: url("../../img/example/compare-slider-desktop@2x.png");
+.example__button::before+.example__slider:hover {
+  &:hover {
+    color: $base-color;
   }
 }

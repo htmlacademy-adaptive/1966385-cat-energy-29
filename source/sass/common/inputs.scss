@@ -24,7 +24,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 114%;
+    width: 87%;
   }
 }
 
@@ -69,7 +69,7 @@ input::-webkit-inner-spin-button {
 }
 
 /* input invalid
-.main-form__input--invalid {
+.main-form__input-invalid {
   outline-color: $error-color;
 }
 */
@@ -117,6 +117,18 @@ input::-webkit-inner-spin-button {
 .control-addiction {
   @media (min-width:$desktop-width) {
     padding-left: 60px;
+  }
+}
+
+/*.control-addiction:hover+.control-mark-ckeckbox {
+  &:hover {
+    outline: 1px solid #bababa;
+  }
+}*/
+
+.control:hover+.control-mark-ckeckbox {
+  &:hover {
+    outline: 1px solid #80bdff;
   }
 }
 
@@ -179,10 +191,6 @@ input[type="radio"]:checked~.control-mark::before {
   @media (min-width:$table-width) {
     width: 40px;
     height: 40px;
-
-    &:hover {
-      outline: 1px solid $radio-outline;
-    }
   }
 }
 
@@ -214,9 +222,15 @@ input[type="checkbox"]:checked~.control-mark-ckeckbox::before {
   background-color: $standard-black;
 
   @media (min-width:$table-width) {
+    left: calc(100% - 70px);
+
     &:active {
       background-color: $base-color;
     }
+  }
+
+  @media (min-width:$desktop-width) {
+    left: calc(100% - 36px);
   }
 }
 
@@ -241,9 +255,15 @@ input[type="checkbox"]:checked~.control-mark-ckeckbox::before {
   background-color: $standard-black;
 
   @media (min-width:$table-width) {
+    left: calc(100% - 70px);
+
     &:active {
       background-color: $base-color;
     }
+  }
+
+  @media (min-width:$desktop-width) {
+    left: calc(100% - 36px);
   }
 }
 

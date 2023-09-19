@@ -15,7 +15,8 @@
     content: "";
     height: 1px;
     width: calc(100% + 152px);
-    bottom: -19px;
+    bottom: -20px;
+    left: -76px;
   }
 
   @media (min-width: $table-width) {
@@ -73,11 +74,6 @@
   padding: 0;
 }
 
-.main-footer__social-item {
-  width: 28px;
-  height: 34px;
-}
-
 .main-footer__social-link {
   display: block;
   width: 28px;
@@ -132,8 +128,12 @@
   align-items: center;
   justify-content: space-between;
 
-  &:focus-visible {
-    opacity: 1;
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:hover svg {
+    color: $base-color;
   }
 
   &:active {
@@ -148,18 +148,5 @@
 
   @media (min-width: $table-width) {
     position: static;
-
-    &:hover,
-    :active {
-      color: $base-color;
-    }
   }
-}
-
-.main-footer__academy-link:focus-visible+.main-footer__academy-logo {
-  color: $base-color;
-}
-
-.main-footer__academy-link:active+.main-footer__academy-logo {
-  color: $base-color;
 }
