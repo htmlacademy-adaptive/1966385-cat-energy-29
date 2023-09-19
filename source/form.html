@@ -16,9 +16,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
 
-<body class="page__body">
+<body class="page-body">
 
-  <header class="main-header main-header__hero-bg main-header__mobile main-header__no-background">
+  <header class="main-header main-header--hero-bg main-header--no-background">
     <div class="wrapper">
       <a href="index.html" class="main-header__logo">
         <picture>
@@ -57,7 +57,7 @@
     </nav>
   </header>
 
-  <main class="main-form main-container__wrapper">
+  <main class="main-form">
     <form class="main-form__filtre main-form__wrapper" action="https://echo.htmlacademy.ru/" method="get">
       <section class="main-form__program">
         <h1 class="visually-hidden">Форма выбора критериев для диеты</h1>
@@ -68,12 +68,11 @@
               программу питания для вашего кота</legend>
             <div class="main-form__input-wrapper">
               <label class="main-form__input-name">ИМЯ:*
-                <input class="main-form__input main-form__input--invalid input" type="text" placeholder="барсик"
+                <input class="main-form__input main-form__input-invalid input" type="text" placeholder="барсик"
                   required>
               </label>
               <label class="main-form__input-name">Вес (кг):*
-                <input class="main-form__input main-form__input--invalid input" type="number" min="1" value="7"
-                  required>
+                <input class="main-form__input main-form__input-invalid input" type="number" min="1" value="7" required>
               </label>
               <label class="main-form__input-name">Возраст (лет):
                 <input class="main-form__input input" type="number" min="1" value="7">
@@ -111,12 +110,12 @@
           <legend class="main-form__title--second main-form__title">Контактные данные (владельца кота)</legend>
           <div class="main-form__contact-wrapper">
             <label class="main-form__input-name">E-mail:*
-              <input class="main-form__program-owner-input main-form__input--invalid input" type="email"
+              <input class="main-form__program-owner-input main-form__input-invalid input" type="email"
                 placeholder="kuklachev@gmail.com" required>
               <span class="main-form__program-owner-email"></span>
             </label>
             <label class="main-form__input-name">Телефон:*
-              <input class="main-form__program-owner-input main-form__input--invalid input" type="tel"
+              <input class="main-form__program-owner-input main-form__input-invalid input" type="tel"
                 placeholder="8 (960) 900-60-90" required>
               <span class="main-form__program-owner-phone"></span>
             </label>
@@ -125,7 +124,7 @@
         <fieldset class="main-form__comments">
           <legend class="main-form__comments-title">Комментарий</legend>
           <textarea
-            class="main-form__comments-input main-form__input--invalid input">Расскажите обо всех повадках кота</textarea>
+            class="main-form__comments-input main-form__input-invalid input">Расскажите обо всех повадках кота</textarea>
         </fieldset>
         <fieldset class="main-form__extra">
           <legend class="main-form__addictional-title">Дополнительно</legend>
@@ -144,14 +143,14 @@
                 <span class="control-label">питьевая вода</span>
               </label>
             </li>
-            <li class="main-form__extra_item">
+            <li class="main-form__extra-item">
               <label class="control control-addiction">
                 <input class="control-item visually-hidden" name="milk" type="checkbox">
                 <span class="control-mark-ckeckbox"></span>
                 <span class="control-label">молоко</span>
               </label>
             </li>
-            <li class="main-form__extra_item">
+            <li class="main-form__extra-item">
               <label class="control control-addiction">
                 <input class="control-item visually-hidden" name="vitamins" type="checkbox">
                 <span class="control-mark-ckeckbox"></span>
@@ -185,7 +184,7 @@
     </section>
   </main>
   <footer class="main-footer">
-    <div class="main-footer__wrapper main-footer__wrapper-catalog">
+    <div class="main-footer__wrapper">
       <a href="#" class="main-footer__logo-link">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 24">
           <use xlink:href="img/sprite.svg#footer-logo"></use>
@@ -231,6 +230,7 @@
       </div>
     </div>
   </footer>
+  <script src="./js/script.js"></script>
 </body>
 
 </html>

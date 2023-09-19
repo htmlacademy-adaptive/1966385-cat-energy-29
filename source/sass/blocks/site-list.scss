@@ -109,25 +109,37 @@
 }
 
 .site-list__link--current {
-  text-decoration: underline;
-  text-decoration-color: $base-color;
-  text-underline-position: under;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 9px;
+  text-decoration: none;
+
+  @media (min-width:$desktop-width) {
+    text-decoration: underline;
+    text-decoration-color: $base-color;
+    text-underline-position: under;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 9px;
+  }
 
   @media (min-width: $desktop-width) {
     text-decoration-color: $base-color
   }
 }
 
-.site-list__link-index--current {
-  text-decoration: underline;
-  text-decoration-color: $base-color;
-  text-underline-position: under;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 9px;
+.site-list__link--index-current {
+  @media (min-width:$table-width) {
+    text-decoration: underline;
+    text-decoration-color: $base-color;
+    text-underline-position: under;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 9px;
+  }
 
   @media (min-width: $desktop-width) {
     text-decoration-color: $standard-white
   }
+}
+
+
+.main-nav__toggle:focus~.site-list--hidden,
+.main-nav__toggle:active~.site-list--hidden {
+  display: block;
 }

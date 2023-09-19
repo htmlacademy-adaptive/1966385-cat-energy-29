@@ -25,14 +25,14 @@ export const styles = () => {
     ]))
     .pipe(rename('style.min.css'))
     .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
-    .pipe(browser.stream());
+    .pipe(browser.stream())
 }
 
 //HTML
 export const html = () => {
   return gulp.src('source/*.html')
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest('build'));
+    .pipe(gulp.dest('build'))
 };
 
 //Scripts
@@ -40,7 +40,7 @@ const scripts = () => {
   return gulp.src('source/js/*.js')
     .pipe(terser())
     .pipe(gulp.dest('build/js'))
-    .pipe(browser.stream());;
+    .pipe(browser.stream())
 }
 
 //Images
@@ -160,4 +160,4 @@ export default gulp.series(
     server,
     watcher
   )
-);
+)

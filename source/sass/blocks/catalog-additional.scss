@@ -131,7 +131,33 @@
     padding: 15px 0 17px;
     display: flex;
     justify-content: space-between;
-    column-gap: 40px;
+    outline: none;
+
+    &::after {
+      border-bottom: 1px solid $special-grey;
+      position: absolute;
+      display: block;
+      flex-grow: 1;
+      content: "";
+      height: 1px;
+      width: 100%;
+      bottom: 0;
+    }
+  }
+}
+
+.catalog-additional__item:nth-child(1) {
+  @media (min-width:$desktop-width) {
+    &::before {
+      border-bottom: 1px solid $special-grey;
+      position: absolute;
+      display: block;
+      flex-grow: 1;
+      content: "";
+      height: 1px;
+      width: 100%;
+      top: -2px;
+    }
   }
 }
 
@@ -271,7 +297,7 @@
     &::before {
       position: absolute;
       content: "";
-      top: 100px;
+      top: 96px;
       left: 50%;
       margin-right: -50%;
       transform: translate(-50%, -50%);

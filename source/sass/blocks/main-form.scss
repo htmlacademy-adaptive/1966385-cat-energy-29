@@ -33,7 +33,7 @@
     content: "";
     position: absolute;
     border-bottom: 1px solid $gainsboro-color;
-    width: calc(100% + 40px);
+    width: calc(100% + 96px);
     left: -20px;
     top: 364px;
   }
@@ -50,7 +50,7 @@
 
   @media (min-width: $desktop-width) {
     width: 100%;
-    margin: 0 70px 0 0;
+    margin: 0;
   }
 }
 
@@ -89,7 +89,7 @@
 
   @media (min-width: $desktop-width) {
     margin: 0;
-    width: 100%;
+    width: 77%;
     padding: 27px 34px 25px 34px;
   }
 }

@@ -20,7 +20,7 @@
   }
 }
 
-.main-header__hero-bg {
+.main-header--hero-bg {
   @media (min-width: $desktop-width) {
     &::before {
       content: "";
@@ -39,6 +39,7 @@
       @media (min-resolution: 2dppx) {
         content: "";
         background-image: url("../../img/hero-block/index-background-desktop\ 1@2x.png");
+        background-size: contain;
       }
     }
 
@@ -56,7 +57,7 @@
   }
 }
 
-.main-header__no-background {
+.main-header--no-background {
   &::before {
     display: none;
   }

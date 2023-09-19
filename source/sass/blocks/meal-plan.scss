@@ -248,8 +248,9 @@
   &::before {
     position: absolute;
     content: "";
-    background-image: url("../img/meal-plan/arrow-right.svg");
-    background-repeat: no-repeat;
+    mask-image: url("../img/meal-plan/arrow-right.svg");
+    mask-repeat: no-repeat;
+    background-color: $standard-black;
     bottom: 50%;
     top: 50%;
     left: 114px;
@@ -265,6 +266,12 @@
 
     &::before {
       left: 149px;
+    }
+
+    &:hover::before {
+      content: "";
+      mask-image: url("../img/meal-plan/arrow-right-hover.svg");
+      mask-repeat: no-repeat;
     }
   }
 
