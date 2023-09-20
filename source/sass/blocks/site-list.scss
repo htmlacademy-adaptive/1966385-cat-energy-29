@@ -138,8 +138,11 @@
   }
 }
 
+.main-nav__toggle:focus {
+  background-image: url("../../img/header/header-nav-close.svg");
+}
 
-.main-nav__toggle:focus~.site-list--hidden,
-.main-nav__toggle:active~.site-list--hidden {
+
+.main-nav__toggle:focus~.site-list--hidden {
   display: block;
 }
