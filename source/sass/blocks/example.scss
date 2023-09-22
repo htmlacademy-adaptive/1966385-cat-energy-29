@@ -256,7 +256,7 @@
     content: "";
     background-image: url("../img/example/slides-tablet.png");
     background-repeat: no-repeat;
-    margin: 92px 0 0px;
+    margin: 92px 0 0;
     min-width: 560px;
     min-height: 512px;
     background-color: transparent;
@@ -366,7 +366,6 @@
     &::before {
       height: 512px;
     }
-
   }
 
   @media (min-width: $desktop-width) {

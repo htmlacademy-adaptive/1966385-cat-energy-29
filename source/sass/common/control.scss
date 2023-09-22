@@ -64,18 +64,12 @@
   outline: solid 1px $special-grey;
   cursor: pointer;
 
-
-
   @media (min-width: $table-width) {
     width: 40px;
     height: 40px;
 
     &:hover {
       outline-color: $radio-outline;
-    }
-
-    &:focus-visible {
-      outline: solid 1px tomato;
     }
   }
 

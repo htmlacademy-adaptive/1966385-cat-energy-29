@@ -412,12 +412,6 @@
   }
 }
 
-.main-form__input-important {
-  display: flex;
-  flex-direction: column;
-  margin: 0 0 31px;
-}
-
 .main-form__description {
   color: $shade-black;
   text-align: center;
@@ -638,6 +632,10 @@
 }
 
 .main-form__input-important {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 31px;
+
   @media (min-width: $table-width) {
     display: flex;
     flex-direction: row;
