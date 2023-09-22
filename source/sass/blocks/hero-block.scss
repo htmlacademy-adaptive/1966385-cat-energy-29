@@ -43,7 +43,7 @@
     }
   }
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     display: flex;
     min-height: 580px;
     flex-direction: column;
@@ -87,6 +87,8 @@
   line-height: 14px;
   text-transform: uppercase;
   margin-bottom: 28px;
+  background-color: rgba($base-color, 0.85);
+  max-width: 416px;
 
   @media (min-width: $table-width) {
     color: $standard-black;
@@ -94,9 +96,10 @@
     position: relative;
     font-size: 20px;
     line-height: 20px;
+    background-color: $standard-white;
   }
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     margin: 0 auto 21px 190px;
   }
 }
@@ -118,6 +121,7 @@
   text-transform: uppercase;
   align-items: center;
   justify-content: center;
+  max-width: 416px;
 
   @media (min-width: $table-width) {
     position: absolute;

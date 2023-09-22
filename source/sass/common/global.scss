@@ -3,6 +3,20 @@
 .page-body {
   margin: 0 auto;
   background-color: $standard-white;
+  min-width: 320px;
+}
+
+.page__body--no-js .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .visually-hidden {

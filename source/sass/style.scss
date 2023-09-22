@@ -1,10 +1,10 @@
 @import "./blocks/main-header";
 @import "./common/global";
-@import "./blocks/hero";
+@import "./blocks/hero-block";
 @import "./blocks/meal-plan";
 @import "./blocks/meal-works";
 @import "./blocks/site-list";
-@import "./blocks/map";
+@import "./blocks/main-nav.scss";
 
 // Fonts
 @import "./common/fonts";
@@ -13,14 +13,12 @@
 @import "./common/wrapper";
 @import "./blocks/example";
 @import "./blocks/cooperate";
-@import "./blocks/footer";
+@import "./blocks/main-footer";
 @import "./blocks/main-form";
 
 // Inputs
 @import "./common/inputs";
-
-// Buttons
-@import "./common/buttons";
+@import "./common/control.scss";
 
 /*Catalog*/
 @import "./blocks/catalog-productions";

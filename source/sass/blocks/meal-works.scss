@@ -11,13 +11,13 @@
       position: absolute;
       border-bottom: 1px solid $underline-color;
       width: 100%;
-      bottom: -2px;
+      bottom: -59px;
       left: 0;
     }
   }
 
   @media (min-width: $desktop-width) {
-    padding: 71px 110px 0 110px;
+    padding: 72px 110px 0;
 
     &::after {
       display: none;
@@ -58,138 +58,97 @@
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     margin: 0;
     column-gap: 60px;
-    row-gap: 37px;
+    row-gap: 94px;
+    counter-reset: advantages;
   }
 
   @media (min-width: $desktop-width) {
-    column-gap: 79px;
+    column-gap: 80px;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   }
 }
 
 .meal-work__item {
+  padding: 0 0 0 80px;
   display: flex;
   justify-content: space-between;
   min-height: 60px;
   gap: 20px;
   min-width: 210px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: flex;
+    align-items: start;
+    background-color: $base-color;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 60px;
+    height: 60px;
+    left: 0;
+  }
 
   @media (min-width: $table-width) {
-    background-position: right;
+    padding: 151px 0 0 0;
+    width: 245px;
+
+    &::before {
+      counter-increment: advantages;
+      content: counter(advantages);
+      position: absolute;
+      top: 0;
+      left: 118px;
+      font-family: "Oswald", "Arial", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 280px;
+      line-height: 280px;
+      color: #f2f2f2;
+      z-index: -1;
+    }
+
+    &::after {
+      width: 80px;
+      height: 80px;
+      top: 40px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 126px;
+
+    &::after {
+      top: 40px;
+    }
   }
 }
 
 .meal-work__item-leaf {
-  @media (min-width: $table-width) {
-    min-height: 280px;
-    height: 100%;
-    background-image: url("../../img/meal-work/bg-one.svg");
-    background-repeat: no-repeat;
-    background-position: 122px 38px;
+  &::after {
+    background-image: url("../img/meal-work/leaf.svg");
   }
 }
 
 .meal-work__item-water {
-  @media (min-width: $table-width) {
-    min-height: 280px;
-    height: 100%;
-    background-image: url("../../img/meal-work/bg-2.svg");
-    background-repeat: no-repeat;
-    background-position: 122px 38px;
+  &::after {
+    background-image: url("../img/meal-work/bubble.svg");
   }
 }
 
 .meal-work__item-eat {
-  @media (min-width: $table-width) {
-    min-height: 280px;
-    height: 100%;
-    background-image: url("../../img/meal-work/bg-3.svg");
-    background-repeat: no-repeat;
-    background-position: 122px 38px;
+  &::after {
+    background-image: url("../img/meal-work/eat.svg");
   }
 }
 
 .meal-work__item-time {
-  @media (min-width: $table-width) {
-    min-height: 280px;
-    height: 100%;
-    background-image: url("../../img/meal-work/bg-4.svg");
-    background-repeat: no-repeat;
-    background-position: 122px 38px;
+  &::after {
+    background-image: url("../img/meal-work/time.svg");
   }
 }
 
-.meal-work__item-leaf-icon {
-  display: flex;
-  align-items: start;
-  background-image: url("../../../img/meal-work/leaf.svg");
-  background-color: $base-color;
-  background-repeat: no-repeat;
-  background-position: center;
-  min-width: 60px;
-  height: 60px;
-
-  @media (min-width: $table-width) {
-    display: flex;
-    width: 80px;
-    height: 80px;
-    margin: 40px auto 11px 0;
-  }
-}
-
-.meal-work__item-water-icon {
-  display: flex;
-  align-items: start;
-  background-image: url("../img/meal-work/bubble.svg");
-  background-color: $base-color;
-  background-repeat: no-repeat;
-  background-position: center;
-  min-width: 60px;
-  height: 60px;
-
-  @media (min-width: $table-width) {
-    display: flex;
-    width: 80px;
-    height: 80px;
-    margin: 40px auto 11px 0;
-  }
-}
-
-.meal-work__item-eat-icon {
-  display: flex;
-  align-items: start;
-  background-image: url("../img/meal-work/eat.svg");
-  background-color: $base-color;
-  background-repeat: no-repeat;
-  background-position: center;
-  min-width: 60px;
-  height: 60px;
-
-  @media (min-width: $table-width) {
-    display: flex;
-    width: 80px;
-    height: 80px;
-    margin: 40px auto 11px 0;
-  }
-}
-
-.meal-work__item-time-icon {
-  display: flex;
-  align-items: start;
-  background-image: url("../img/meal-work/time.svg");
-  background-color: $base-color;
-  background-repeat: no-repeat;
-  background-position: center;
-  min-width: 60px;
-  height: 60px;
-
-  @media (min-width: $table-width) {
-    display: flex;
-    width: 80px;
-    height: 80px;
-    margin: 40px auto 11px 0;
-  }
-}
 
 .meal-work__item-description {
   margin: 0;
@@ -205,10 +164,10 @@
   @media (min-width: $table-width) {
     font-size: 16px;
     line-height: 24px;
-    margin-right: 60px;
+    margin: 0;
   }
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     margin: 0;
   }
 }

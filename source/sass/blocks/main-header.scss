@@ -29,17 +29,18 @@
       right: 0;
       transform: none;
       left: revert;
-      width: 720px;
+      width: 50%;
       height: 694px;
       top: 0;
       background-image: url("../../img/hero-block/index-background-desktop\ 1.png");
       background-repeat: no-repeat;
       z-index: 1;
+      background-size: cover;
 
       @media (min-resolution: 2dppx) {
         content: "";
         background-image: url("../../img/hero-block/index-background-desktop\ 1@2x.png");
-        background-size: contain;
+        background-size: cover;
       }
     }
 
@@ -50,7 +51,7 @@
       right: 0;
       background-color: $apple-color;
       z-index: 2;
-      width: 720px;
+      width: 50%;
       height: 694px;
       top: 0;
     }
@@ -74,7 +75,7 @@
     bottom: -3px;
   }
 
-  @media (min-width:$table-width) {
+  @media (min-width: $table-width) {
     &::after {
       display: none;
     }
@@ -127,72 +128,8 @@
     opacity: 0.6;
   }
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     width: 118px;
     height: 23px;
-  }
-}
-
-.main-nav {
-  display: flex;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  background-color: $standard-white;
-
-  @media (min-width: $table-width) {
-    display: flex;
-  }
-
-  @media (min-width: $desktop-width) {
-    background-color: transparent;
-    z-index: 3;
-  }
-}
-
-.main-nav__list {
-  display: block;
-  width: 24px;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.main-nav__list-link {
-  color: $standard-black;
-  text-decoration: none;
-  font-family: "Oswald", "Arial", sans-serif;
-  font-size: 20px;
-  font-style: normal;
-  font-display: swap;
-  font-weight: 400;
-  line-height: 20px;
-  text-transform: uppercase;
-}
-
-.main-nav__toggle {
-  background-image: url("../img/header/Header-nav-open.svg");
-  background-repeat: no-repeat;
-  border: none;
-  width: 24px;
-  height: 24px;
-  background-color: $standard-white;
-  cursor: pointer;
-
-  @media (min-width: $table-width) {
-    display: none;
-    cursor: default;
-  }
-
-  &--open {
-    background-image: url("../../img/header/header-nav-close.svg");
-  }
-
-  &:hover {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
   }
 }

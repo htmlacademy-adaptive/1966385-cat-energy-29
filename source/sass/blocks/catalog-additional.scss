@@ -1,14 +1,30 @@
 .catalog-additional {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 25px 20px;
 
   @media (min-width: $table-width) {
     padding: 0 30px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      top: 93px;
+      right: -30px;
+      border-bottom: 2px solid $apple-color;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   @media (min-width: $desktop-width) {
     padding: 0 110px;
+
+    &::before {
+      top: 98px;
+    }
   }
 }
 
@@ -17,7 +33,7 @@
   margin: 0;
   padding: 0;
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     width: 100%;
   }
 }
@@ -34,19 +50,6 @@
   text-align: start;
   z-index: 2;
 
-  &::before {
-    border-bottom: 2px solid $apple-color;
-    position: absolute;
-    display: block;
-    flex-grow: 1;
-    content: "";
-    height: 1px;
-    width: calc(100% - 226px);
-    bottom: 8px;
-    right: -20px;
-    z-index: 1;
-  }
-
   &::after {
     border-bottom: 1px solid $special-grey;
     position: absolute;
@@ -61,45 +64,21 @@
   @media (min-width: $table-width) {
     font-size: 36px;
     line-height: 36px;
-    margin: 20px 0 80px 40px;
-
-    &::before {
-      width: calc(100% - 348px);
-      bottom: 12px;
-      right: -30px;
-    }
+    margin: 71px 0 81px;
+    padding-left: 40px;
+    background-color: $standard-white;
+    max-width: 378px;
 
     &::after {
-      border-bottom: 2px solid $apple-color;
-      position: absolute;
-      display: block;
-      flex-grow: 1;
-      content: "";
-      height: 1px;
-      width: calc(100% - 638px);
-      bottom: 12px;
-      left: -70px;
+      display: none;
     }
   }
 
   @media (min-width: $desktop-width) {
-    margin: 75px 0 80px;
+    margin: 75px 0 79px -40px;
     font-size: 36px;
     line-height: 36px;
-
-    &::before {
-      width: calc(100% - 267px);
-      bottom: 11px;
-      right: -110px;
-    }
-
-    &::after {
-      left: -110px;
-      width: 70px;
-      bottom: 11px;
-    }
   }
-
 }
 
 .catalog-additional__item {
@@ -118,8 +97,8 @@
   }
 
   @media (min-width: $table-width) {
-    outline: 1px solid $special-grey;
-    padding: 24px 38px 28px;
+    border: 1px solid $special-grey;
+    padding: 23px 38px 27px;
     min-height: auto;
 
     &::after {
@@ -128,26 +107,15 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 15px 0 17px;
+    padding: 16px 0 14px;
     display: flex;
     justify-content: space-between;
     outline: none;
-
-    &::after {
-      border-bottom: 1px solid $special-grey;
-      position: absolute;
-      display: block;
-      flex-grow: 1;
-      content: "";
-      height: 1px;
-      width: 100%;
-      bottom: 0;
-    }
   }
 }
 
 .catalog-additional__item:nth-child(1) {
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     &::before {
       border-bottom: 1px solid $special-grey;
       position: absolute;
@@ -179,8 +147,8 @@
     line-height: 20px;
   }
 
-  @media (min-width:$desktop-width) {
-    margin: 0px 123px 0 0;
+  @media (min-width: $desktop-width) {
+    margin: 0 123px 0 0;
   }
 }
 
@@ -192,10 +160,10 @@
   font-display: swap;
   font-weight: 400;
   line-height: 14px;
-  margin-bottom: 12px;
+  margin-bottom: 11px;
 
   @media (min-width: $table-width) {
-    margin: 5px 38px 0 0;
+    margin: 0;
   }
 }
 
@@ -207,18 +175,29 @@
 
   @media (min-width: $table-width) {
     display: flex;
-    min-width: 263px;
+    min-width: 0;
     font-family: "Lato", "Arial", sans-serif;
     font-display: swap;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 20px;
-    column-gap: 50px;
   }
 
-  @media (min-width:$desktop-width) {
-    min-width: 286px;
+  @media (min-width: $desktop-width) {
+    min-width: 323px;
+  }
+}
+
+.catalog-additional__description-item {
+  @media (min-width: $table-width) {
+    min-width: 90px;
+    text-align: end;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 79px;
+    text-align: start;
   }
 }
 
@@ -227,14 +206,29 @@
   display: flex;
   flex-wrap: wrap;
   align-content: flex-end;
-  background: $base-color url("../../img/catalog/image-1.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-blend-mode: multiply;
+  background-color: rgba($base-color, 0.85);
   color: $standard-white;
   text-align: center;
   padding: 186px 61px 44px 58px;
   margin: 21px 0 10px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url("../img/catalog/image-1.jpg");
+    background-size: cover;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/catalog/image-1@2x.jpg");
+      background-size: contain;
+    }
+  }
 
   &::before {
     position: absolute;
@@ -245,7 +239,7 @@
     transform: translate(-50%, -50%);
     width: 80px;
     height: 85px;
-    background-image: url("../../img/catalog/icon-gift.svg");
+    background-image: url("../img/catalog/icon-gift.svg");
     background-repeat: no-repeat;
 
     @media (min-width: $table-width) {
@@ -253,46 +247,58 @@
     }
   }
 
-  @media (min-resolution: 2dppx) {
-    background: $base-color url("../../img/catalog/image-1@2x.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-
   @media (min-width: $table-width) {
     display: flex;
-    background: $base-color url("../../img/catalog/image-2.png");
+    background-color: rgba($base-color, 0.85);
     align-content: center;
     min-height: 200px;
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 0 125px 75px 420px;
-    margin: 70px 0 0 0;
+    padding: 0 122px 0 420px;
+    margin: 69px 0 75px;
     justify-content: flex-end;
 
-    @media (min-resolution: 2dppx) {
-      background: $base-color url("../../img/catalog/image-2@2x.png");
-      background-size: contain;
-      background-repeat: no-repeat;
+    &::after {
+      position: absolute;
+      content: "";
+      background-image: url("../img/catalog/image-2.jpg");
+      background-size: cover;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/catalog/image-2@2x.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
     }
   }
 
   @media (min-width: $desktop-width) {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-end;
-    min-height: 204px;
-    background: $base-color url("../../img/catalog/image-1.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-blend-mode: multiply;
-    color: $standard-white;
-    text-align: center;
     padding: 0;
     margin: 0;
-    width: 245px;
-    height: 288px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      background-image: url("../img/catalog/image-1.jpg");
+      background-size: cover;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/catalog/image-1@2x.jpg");
+        background-size: cover;
+      }
+    }
 
     &::before {
       position: absolute;
@@ -303,7 +309,7 @@
       transform: translate(-50%, -50%);
       width: 78px;
       height: 80px;
-      background-image: url("../../img/catalog/icon-gift.svg");
+      background-image: url("../img/catalog/icon-gift.svg");
       background-repeat: no-repeat;
     }
   }
@@ -325,12 +331,41 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 186px 0 41px;
+    padding: 185px 42px 43px;
     text-align: center;
-    min-width: 245px;
+    min-width: 162px;
   }
 }
 
-.cooperate-catalog {
-  background-color: $card-color;
+/*Buttons*/
+
+.catalog-additional__button {
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  color: $standard-white;
+  background-color: $base-color;
+  text-align: center;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  min-height: 20px;
+
+  @media (min-width: $desktop-width) {
+    min-width: 244px;
+
+    &:hover {
+      background-color: $hover-button;
+    }
+
+    &:active {
+      opacity: 0.3;
+      background-color: $hover-button;
+    }
+  }
 }
