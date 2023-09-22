@@ -1,12 +1,54 @@
 @import "../common/variables";
 
+
+/*Wrapper*/
+.example__result-number-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (min-width: $table-width) {
+    flex-direction: row;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.example__result-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 10px;
+  column-gap: 5px;
+
+  @media (min-width: $table-width) {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -15px;
+    column-gap: 5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 43px 0 10px;
+    align-items: center;
+    column-gap: 66px;
+  }
+}
+
 .example {
   padding: 25px 20px 40px;
   background-color: $example-bg;
 
   @media (min-width: $table-width) {
     padding: 0 30px 100px;
-    background: linear-gradient($standard-white 619px, $example-bg 619px);
+    background: linear-gradient($standard-white 678px, $example-bg 678px);
   }
 
   @media (min-width: $desktop-width) {
@@ -14,8 +56,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background: linear-gradient($standard-white 204px, $example-bg 204px);
-    column-gap: 224px;
+    background: linear-gradient($standard-white 207px, $example-bg 207px);
+    column-gap: 228px;
   }
 }
 
@@ -23,16 +65,19 @@
   display: flex;
   flex-direction: column;
   justify-content: left;
+  margin-bottom: 20px;
 
   @media (min-width: $table-width) {
     background-color: $standard-white;
     padding: 0;
+    margin-bottom: 92px;
   }
 
   @media (min-width: $desktop-width) {
     width: 74vw;
-    background: linear-gradient($standard-white 204px, $example-bg 204px);
+    background: linear-gradient($standard-white 207px, $example-bg 207px);
     padding: 0;
+    margin: 0;
   }
 }
 
@@ -49,11 +94,11 @@
   @media (min-width: $table-width) {
     font-size: 60px;
     line-height: 60px;
-    margin: 47px auto 60px 0;
+    margin: 104px auto 60px 0;
   }
 
-  @media (min-width:$desktop-width) {
-    margin: 70px auto 0;
+  @media (min-width: $desktop-width) {
+    margin: 72px auto 0;
   }
 }
 
@@ -74,8 +119,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 143px auto 44px 0;
-    width: 95%;
+    margin: 146px auto 68px 0;
+    width: 100%;
   }
 }
 
@@ -88,14 +133,14 @@
     column-gap: 43px;
   }
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     column-gap: 41px;
     justify-content: flex-start;
   }
 }
 
 .example__result-weight,
-.example__result__time {
+.example__result-time {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -116,7 +161,7 @@
   min-height: 56px;
   align-items: center;
   justify-content: center;
-  outline: 1px solid #cdcdcd;
+  outline: 1px solid $special-grey;
   border-radius: 5px;
   text-transform: uppercase;
 
@@ -152,7 +197,8 @@
   }
 
   @media (min-width: $desktop-width) {
-    background-color: inherit;
+    background-color: $example-bg;
+    min-width: 133px;
   }
 }
 
@@ -191,18 +237,38 @@
 
 .example__result-slider {
   content: "";
-  background-image: url("../../img/example/slides-mobile.png");
+  background-image: url("../img/example/slides-mobile.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 20px 0 0;
+  display: flex;
+  background-color: $example-bg;
   position: relative;
   min-width: 280px;
   min-height: 256px;
-  margin: 0 auto;
-  display: flex;
-  background-color: $example-bg;
 
-  @media (min-width:$table-width) {
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/example/slides-mobile@2x.png");
+    background-size: contain;
+  }
+
+  @media (min-width: $table-width) {
+    content: "";
+    background-image: url("../img/example/slides-tablet.png");
+    background-repeat: no-repeat;
+    margin: 92px 0 0;
     min-width: 560px;
     min-height: 512px;
     background-color: transparent;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/example/slides-tablet@2x.png");
+      background-size: contain;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 48px 0 0;
   }
 }
 
@@ -211,14 +277,6 @@
   left: 0;
   top: 0;
   width: 100%;
-
-  &--before {
-    z-index: 100;
-  }
-
-  &--after {
-    z-index: 101;
-  }
 
   img {
     top: 0;
@@ -229,58 +287,124 @@
   }
 }
 
-.example__result-slider {
-  content: "";
-  background-image: url("../../img/example/slides-mobile.png");
-  background-repeat: no-repeat;
-  background-position: center;
+.example-slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 
-  @media (min-resolution: 2dppx) {
-    background-image: url("../../img/example/slides-mobile@2x.png");
-    background-size: contain;
-  }
-
-  @media (min-width:$table-width) {
-    content: "";
-    background-image: url("../../img/example/slides-tablet.png");
-    background-repeat: no-repeat;
-    margin: 92px 0 0px;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../../img/example/slides-tablet@2x.png");
-      background-size: contain;
-    }
-  }
-
-  @media (min-width:$desktop-width) {
-    margin: 43px 0 0;
+  @media (min-width: $desktop-width) {
+    margin-top: 73px;
   }
 }
 
-.example__slider {
+.example-slider__image-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 280px;
+  min-height: 256px;
+
+  @media (min-width: $table-width) {
+    width: 560px;
+    min-height: 512px;
+  }
+}
+
+.example-slider__image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+
+  &--before {
+    clip-path: polygon(50% 0%, 0% 0%, 0% 100%, 50% 100%);
+  }
+
+  &--after {
+    clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%);
+  }
+
+  img {
+    display: block;
+    object-fit: contain;
+  }
+}
+
+.example-slider__toggle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: absolute;
   top: 50%;
   left: 50%;
+  background-color: transparent;
+  border: none;
   transform: translate(-50%, -50%);
-  width: 40px;
-  height: 40px;
-  z-index: 103;
-  color: $slider-gray;
   cursor: pointer;
 
-  @media (min-width:$table-width) {
-    &:hover {
-      color: $base-color;
-    }
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 4px;
+    height: 256px;
+    background-color: $slider-gray;
+    border-radius: 2px;
+    z-index: -1;
+  }
 
-    &:active {
-      opacity: 0.6;
+  @media (min-width: $table-width) {
+    height: 42px;
+
+    &::before {
+      height: 512px;
     }
   }
-}
 
-.example__button::before+.example__slider:hover {
+  @media (min-width: $desktop-width) {
+    height: 68px;
+
+    &::before {
+      height: 512px;
+      top: 21px;
+    }
+  }
+
   &:hover {
-    color: $base-color;
+    .example-slider__thumb {
+      color: $base-color;
+    }
+  }
+
+  &:active {
+    .example-slider__thumb {
+      color: $base-color;
+    }
+  }
+
+  &:hover::before,
+  &:hover::after {
+    color: rgba($base-color, 0.6);
+    background-color: rgba($base-color, 0.6);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: $base-color;
+  }
+
+  .example-slider__thumb {
+    color: $slider-gray;
+
+    &:focus {
+      outline: none;
+    }
   }
 }

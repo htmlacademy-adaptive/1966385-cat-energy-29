@@ -1,3 +1,28 @@
+.catalog-production__list-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.catalog-production__item-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  margin: 29px 0 14px;
+
+  @media (min-width: $table-width) {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 29px 0 20px;
+  }
+}
+
 .catalog-production {
   display: flex;
   flex-direction: column;
@@ -28,7 +53,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 15px 41px 16px 0px;
+    padding: 15px 41px 16px 0;
   }
 }
 
@@ -69,7 +94,7 @@
     content: "";
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
+    width: calc(100% + 40px);
     height: 1px;
     top: 23px;
   }
@@ -83,14 +108,14 @@
     height: 1px;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
+    width: calc(100% + 40px);
     bottom: -25px;
   }
 
 
   @media (min-width: $table-width) {
-    margin: 0 10px 0px;
-    padding: 0 35px 39px;
+    margin: 0 10px 0;
+    padding: 0 37px 39px;
     background: linear-gradient($standard-white 100px, $card-color 100px);
 
     &:first-child::before {
@@ -102,8 +127,8 @@
     }
   }
 
-  @media (min-width:$desktop-width) {
-    padding: 16px 38px 44px;
+  @media (min-width: $desktop-width) {
+    padding: 16px 38px 43px;
     margin: 0;
   }
 }
@@ -116,19 +141,16 @@
   align-items: center;
 
   @media (min-width: $table-width) {
-    margin: 0;
     outline: 2px solid $card-color;
     background: $standard-white;
-    margin: 103px 12px 0px 11px;
-    padding: 0;
-    min-height: 429px;
+    margin: 103px 12px 0 11px;
     align-items: center;
     justify-content: flex-start;
     padding: 50px 35px 0;
   }
 
-  @media (min-width:$desktop-width) {
-    margin: 100px 0px 0 0px;
+  @media (min-width: $desktop-width) {
+    margin: 100px 0 0 0;
     padding: 48px 38px 0;
     min-height: 0;
   }
@@ -138,12 +160,12 @@
   content: "";
   width: 30px;
   height: 30px;
-  background-image: url("../../img/catalog/plus-more.svg");
+  background-image: url("../img/catalog/plus-more.svg");
   cursor: pointer;
   margin: 0 auto;
 
   @media (min-width: $table-width) {
-    background-image: url("../../img/catalog/plus-table.svg");
+    background-image: url("../img/catalog/plus-table.svg");
     width: 60px;
     height: 60px;
     background-repeat: no-repeat;
@@ -178,7 +200,7 @@
     }
   }
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     width: 161px;
     height: 172px;
   }
@@ -196,7 +218,6 @@
     height: 206px;
     box-sizing: border-box;
   }
-
 }
 
 .catalog-production__image-low {
@@ -243,7 +264,7 @@
     }
   }
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     margin: 30px 5px 12px;
   }
 }
@@ -251,8 +272,12 @@
 .catalog-production__item-title--more {
   margin: 24px 0 0;
 
-  @media (min-width:$table-width) {
-    margin: 41px auto 18px;
+  @media (min-width: $table-width) {
+    margin: 48px 40px 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 41px 0 16px;
   }
 }
 
@@ -286,6 +311,10 @@
     justify-content: space-between;
     border-bottom: 1px solid $special-grey;
   }
+
+  @media (min-width: $desktop-width) {
+    min-width: 169px;
+  }
 }
 
 .catalog-production__item-description-more {
@@ -299,13 +328,73 @@
   line-height: 16px;
   margin: 8px 0 21px;
 
-  @media (min-width:$table-width) {
+  @media (min-width: $table-width) {
     font-size: 16px;
     line-height: 18px;
     margin: 8px 20px 82px;
   }
 
-  @media (min-width:$desktop-width) {
-    margin: 8px auto 92px;
+  @media (min-width: $desktop-width) {
+    margin: 9px auto 93px;
+  }
+}
+
+/*Buttons*/
+.catalog-production__button {
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  color: $standard-white;
+  background-color: $base-color;
+  text-align: center;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  min-height: 20px;
+
+  @media (min-width: $desktop-width) {
+    padding: 8px 26px;
+    height: auto;
+
+    &:hover {
+      background-color: $hover-button;
+    }
+
+    &:active {
+      opacity: 0.3;
+      background-color: $hover-button;
+    }
+  }
+}
+
+.catalog-production__button--more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $charcoal-color;
+  background-color: $card-color;
+  text-align: center;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+
+  &:hover {
+    background-color: $hover-second-button;
+  }
+
+  &:active {
+    opacity: 0.3;
+    background-color: $hover-second-button;
   }
 }

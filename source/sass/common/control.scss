@@ -1,0 +1,95 @@
+/* Radio */
+.control-label {
+  color: $nero-color;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  @media (min-width: $table-width) {
+    font-size: 20px;
+    color: $charcoal-color;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: normal;
+  }
+}
+
+.control {
+  position: relative;
+  display: block;
+  padding-left: 45px;
+  cursor: pointer;
+
+  @media (min-width: $table-width) {
+    padding-left: 60px;
+
+    &:active,
+    :disabled {
+      opacity: 0.3;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 53px;
+  }
+}
+
+.control-addiction {
+  @media (min-width: $desktop-width) {
+    padding-left: 60px;
+  }
+}
+
+.control:focus-within .control-mark {
+  outline: 2px solid $radio-outline;
+}
+
+.control-addiction:focus-within .control-mark-ckeckbox {
+  outline: 2px solid $radio-outline;
+}
+
+/* Mark */
+.control-mark {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  outline: solid 1px $special-grey;
+  cursor: pointer;
+
+  @media (min-width: $table-width) {
+    width: 40px;
+    height: 40px;
+
+    &:hover {
+      outline-color: $radio-outline;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    left: -7px;
+  }
+}
+
+.control-mark-ckeckbox {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 29px;
+  outline: solid 1px $special-grey;
+  cursor: pointer;
+
+  @media (min-width: $table-width) {
+    width: 40px;
+    height: 40px;
+  }
+}

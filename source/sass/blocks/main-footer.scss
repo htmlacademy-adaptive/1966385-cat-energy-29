@@ -1,3 +1,25 @@
+.main-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 40px;
+  padding: 39px 20px 54px 19px;
+  background-color: $card-color;
+
+  @media (min-width: $table-width) {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 58px 29px 56px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    padding: 68px 110px 66px;
+  }
+}
+
 .main-footer__logo-link {
   position: relative;
   display: block;
@@ -53,7 +75,7 @@
     transform: translate(-50%, 50%);
   }
 
-  @media (min-width:$table-width) {
+  @media (min-width: $table-width) {
     margin-left: 36px;
 
     &::after {
@@ -98,7 +120,7 @@
 .main-footer__academy {
   width: 100%;
 
-  @media(min-width: $table-width) {
+  @media (min-width: $table-width) {
     min-width: 164px;
     width: auto;
   }

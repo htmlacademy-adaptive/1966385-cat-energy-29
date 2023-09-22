@@ -1,3 +1,21 @@
+/*Wrrapper*/
+.meal-plan__wrapper {
+  padding: 30px 40px 22px;
+
+  @media (min-width: $table-width) {
+    position: relative;
+    padding: 77px 61px 61px 52px;
+    margin: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    margin: 0;
+    padding: 77px 61px 63px 52px;
+    width: 50%;
+  }
+}
+
 .meal-plan {
   display: flex;
   flex-direction: column;
@@ -29,7 +47,7 @@
   @media (min-width: $table-width) {
     &::after {
       content: "";
-      background-image: url("../../img/meal-plan/cat-slim-tablet.png");
+      background-image: url("../img/meal-plan/cat-slim-tablet.png");
       background-repeat: no-repeat;
       background-size: contain;
       width: 200px;
@@ -39,7 +57,7 @@
       top: 81px;
 
       @media (min-resolution: 2dppx) {
-        background-image: url("../../img/meal-plan/cat-slim-tablet@2x.png");
+        background-image: url("../img/meal-plan/cat-slim-tablet@2x.png");
         background-size: contain;
       }
     }
@@ -47,14 +65,14 @@
 
   @media (min-width: $desktop-width) {
     &::after {
-      background-image: url("../../img/meal-plan/cat-slim-desktop.png");
+      background-image: url("../img/meal-plan/cat-slim-desktop.png");
       width: 134px;
       height: 106px;
       left: 52px;
-      top: 44px;
+      top: 42px;
 
       @media (min-resolution: 2dppx) {
-        background-image: url("../../img/meal-plan/cat-slim-desktop@2x.png");
+        background-image: url("../img/meal-plan/cat-slim-desktop@2x.png");
       }
     }
   }
@@ -80,7 +98,7 @@
       top: 91px;
 
       @media (min-resolution: 2dppx) {
-        background-image: url("../../img/meal-plan/cat-pro-tablet@2x.png");
+        background-image: url("../img/meal-plan/cat-pro-tablet@2x.png");
         background-size: contain;
       }
     }
@@ -88,14 +106,14 @@
 
   @media (min-width: $desktop-width) {
     &::after {
-      background-image: url("../../img/meal-plan/cat-pro-desktop.png");
+      background-image: url("../img/meal-plan/cat-pro-desktop.png");
       width: 134px;
       height: 110px;
       left: 33px;
-      top: 50px;
+      top: 48px;
 
       @media (min-resolution: 2dppx) {
-        background-image: url("../../img/meal-plan/cat-pro-desktop@2x.png");
+        background-image: url("../img/meal-plan/cat-pro-desktop@2x.png");
         background-size: contain;
       }
     }
@@ -116,7 +134,7 @@
   &::before {
     position: absolute;
     content: "";
-    background-image: url("../../img/meal-plan/cat-slim-mobile.png");
+    background-image: url("../img/meal-plan/cat-slim-mobile.png");
     background-repeat: no-repeat;
     width: 50px;
     height: 53px;
@@ -125,7 +143,7 @@
 
     @media (min-resolution: 2dppx) {
       content: "";
-      background-image: url("../../img/meal-plan/cat-slim-mobile@2x.png");
+      background-image: url("../img/meal-plan/cat-slim-mobile@2x.png");
       background-size: 50px 53px;
     }
   }
@@ -133,7 +151,7 @@
   @media (min-width: $table-width) {
     font-size: 36px;
     line-height: 36px;
-    margin: 0 auto 24px 0;
+    margin: 0 430px 24px 0;
 
     &::before {
       background-image: none;
@@ -141,7 +159,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 3px auto 62px 161px;
+    margin: 0 auto 61px 161px;
   }
 }
 
@@ -167,7 +185,7 @@
     top: -6px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../../img/meal-plan/cat-pro-mobile@2x.png");
+      background-image: url("../img/meal-plan/cat-pro-mobile@2x.png");
       background-size: contain;
     }
   }
@@ -175,7 +193,7 @@
   @media (min-width: $table-width) {
     font-size: 36px;
     line-height: 36px;
-    margin: 0 auto 24px 0;
+    margin: 0 389px 24px 0;
 
     &::before {
       background-image: none;
@@ -184,7 +202,7 @@
 
   @media (min-width: $desktop-width) {
     text-align: center;
-    margin: 3px auto 61px 162px;
+    margin: 1px auto 61px 162px;
   }
 }
 
@@ -219,6 +237,10 @@
     margin: 0 316px 48px 0;
     font-size: 16px;
     line-height: 24px;
+
+    &::before {
+      display: none;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -279,7 +301,7 @@
     opacity: 0.3;
   }
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $desktop-width) {
     margin: 0;
   }
 }

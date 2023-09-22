@@ -59,18 +59,27 @@
 }
 
 .site-list__link-catalog {
-  @media (min-width:$desktop-width) {
+  @media (min-width: $table-width) {
     color: $standard-black;
   }
 }
 
 .site-list--hidden {
-  display: none;
+  display: block;
 
   @media (min-width: $table-width) {
     display: flex;
+    flex-direction: row;
+    max-width: 60vw;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 37vw;
+    row-gap: 20px;
   }
 }
+
 
 .site-list__item {
   font-family: "Oswald", "Arial", sans-serif;
@@ -80,8 +89,7 @@
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
-  padding-top: 22px;
-  padding-bottom: 22px;
+  padding: 25px 0 21px 0;
   border-top: 1px solid $border-color;
   background-color: $standard-white;
 
@@ -111,21 +119,21 @@
 .site-list__link--current {
   text-decoration: none;
 
-  @media (min-width:$desktop-width) {
+  @media (min-width: $table-width) {
     text-decoration: underline;
     text-decoration-color: $base-color;
     text-underline-position: under;
     text-decoration-thickness: 2px;
-    text-underline-offset: 9px;
+    text-underline-offset: 6px;
   }
 
-  @media (min-width: $desktop-width) {
-    text-decoration-color: $base-color
+  @media (min-width: $table-width) {
+    text-decoration-color: $base-color;
   }
 }
 
 .site-list__link--index-current {
-  @media (min-width:$table-width) {
+  @media (min-width: $table-width) {
     text-decoration: underline;
     text-decoration-color: $base-color;
     text-underline-position: under;
@@ -134,15 +142,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    text-decoration-color: $standard-white
+    text-decoration-color: $standard-white;
   }
-}
-
-.main-nav__toggle:focus {
-  background-image: url("../../img/header/header-nav-close.svg");
-}
-
-
-.main-nav__toggle:focus~.site-list--hidden {
-  display: block;
 }
