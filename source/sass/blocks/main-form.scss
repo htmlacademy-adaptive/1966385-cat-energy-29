@@ -1,3 +1,87 @@
+.main-form__input-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+
+  @media (min-width: $table-width) {
+    row-gap: 27px;
+  }
+
+  @media (min-width: $desktop-width) {
+    row-gap: 26px;
+  }
+}
+
+.main-form__program-wrapper {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid $gainsboro-color;
+    width: calc(100% + 40px);
+    left: -20px;
+    bottom: 12px;
+  }
+
+  @media (min-width: $table-width) {
+    display: flex;
+    flex-direction: column;
+    column-gap: 72px;
+    width: 100%;
+    justify-content: space-between;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+    column-gap: 0;
+    align-items: start;
+    margin: 0;
+  }
+}
+
+.main-form__wrapper {
+  position: relative;
+  padding: 0 20px;
+
+  &::before {
+    position: absolute;
+    border-top: 1px solid $gainsboro-color;
+  }
+
+  @media (min-width: $table-width) {
+    padding: 0 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 110px;
+  }
+}
+
+.main-form__contact-wrapper {
+  row-gap: 14px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $table-width) {
+    display: flex;
+    flex-direction: column;
+    row-gap: 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+    column-gap: 80px;
+    margin: 0;
+  }
+}
+
 .main-form__title {
   color: $standard-black;
   font-family: "Oswald", "Arial", sans-serif;

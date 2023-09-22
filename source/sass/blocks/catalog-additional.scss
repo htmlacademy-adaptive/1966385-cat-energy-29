@@ -1,3 +1,29 @@
+.catalog-additional__wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 87px 0;
+    column-gap: 79px;
+  }
+}
+
+.catalog-additional__item-wrapper {
+  @media (min-width: $table-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 21px;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: space-between;
+    margin: 0;
+    width: 100%;
+  }
+}
+
 .catalog-additional {
   position: relative;
   display: flex;
