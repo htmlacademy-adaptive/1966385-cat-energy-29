@@ -211,6 +211,7 @@
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
+  max-width: 200px;
 
   @media (min-width: $table-width) {
     text-align: end;

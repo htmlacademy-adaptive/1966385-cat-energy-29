@@ -2,6 +2,7 @@
 @import "../common/variables";
 
 .main-header {
+  //With JS
   display: flex;
   position: relative;
   justify-content: space-between;
@@ -13,6 +14,36 @@
   @media (min-width: $table-width) {
     display: flex;
     padding: 19px 34px 25px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 55px 110px;
+  }
+}
+
+// .main-header--nojs {
+//   padding: 0 20px;
+//   width: 100%;
+
+//   @media (min-width: $table-width) {
+//     display: flex;
+//     padding: 19px 34px 25px 30px;
+//   }
+
+//   @media (min-width: $desktop-width) {
+//     padding: 55px 110px;
+//   }
+// }
+
+.main-header__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $table-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 12px 34px 19px 10px;
+    position: relative;
   }
 
   @media (min-width: $desktop-width) {
@@ -32,14 +63,14 @@
       width: 50%;
       height: 694px;
       top: 0;
-      background-image: url("../../img/hero-block/index-background-desktop\ 1.png");
+      background-image: url("../img/hero-block/index-background-desktop-1.jpg");
       background-repeat: no-repeat;
       z-index: 1;
       background-size: cover;
 
       @media (min-resolution: 2dppx) {
         content: "";
-        background-image: url("../../img/hero-block/index-background-desktop\ 1@2x.png");
+        background-image: url("../img/hero-block/index-background-desktop-1@2x.jpg");
         background-size: cover;
       }
     }
@@ -82,6 +113,19 @@
   }
 }
 
+.main-header__logo-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 12px 15px 10px 20px;
+  align-items: center;
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    padding: 0;
+  }
+}
+
 .main-header__logo {
   display: flex;
   flex-direction: row;
@@ -110,14 +154,15 @@
 
 .main-header__icon-logo {
   position: absolute;
-  top: 50%;
+  top: 32px;
   left: 50%;
   transform: translate(-50%, -50%);
 
   @media (min-width: $table-width) {
     display: flex;
-    position: relative;
-    left: 39%;
+    position: absolute;
+    left: 154px;
+    top: 47%;
   }
 
   &:hover {

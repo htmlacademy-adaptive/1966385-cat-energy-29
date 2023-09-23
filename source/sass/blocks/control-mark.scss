@@ -1,0 +1,39 @@
+.control-mark {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  outline: solid 1px $special-grey;
+  cursor: pointer;
+
+  @media (min-width: $table-width) {
+    width: 40px;
+    height: 40px;
+
+    &:hover {
+      outline-color: $radio-outline;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    left: -7px;
+  }
+}
+
+.control-mark-ckeckbox {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 29px;
+  outline: solid 1px $special-grey;
+  cursor: pointer;
+
+  @media (min-width: $table-width) {
+    width: 40px;
+    height: 40px;
+  }
+}

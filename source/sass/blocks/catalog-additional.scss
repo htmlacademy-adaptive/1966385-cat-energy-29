@@ -133,15 +133,14 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 16px 0 14px;
+    padding: 17px 0 15px;
     display: flex;
     justify-content: space-between;
     outline: none;
-  }
-}
+    border-bottom: 1px solid $special-grey;
+    border: none;
+    align-items: center;
 
-.catalog-additional__item:nth-child(1) {
-  @media (min-width: $desktop-width) {
     &::before {
       border-bottom: 1px solid $special-grey;
       position: absolute;
@@ -151,6 +150,17 @@
       height: 1px;
       width: 100%;
       top: -2px;
+    }
+
+    &:last-child::after {
+      border-bottom: 1px solid $special-grey;
+      position: absolute;
+      display: block;
+      flex-grow: 1;
+      content: "";
+      height: 1px;
+      width: 100%;
+      bottom: -1px;
     }
   }
 }

@@ -1,20 +1,4 @@
 /*Wrrapper*/
-.meal-plan__wrapper {
-  padding: 30px 40px 22px;
-
-  @media (min-width: $table-width) {
-    position: relative;
-    padding: 77px 61px 61px 52px;
-    margin: 0 30px;
-  }
-
-  @media (min-width: $desktop-width) {
-    position: relative;
-    margin: 0;
-    padding: 77px 61px 63px 52px;
-    width: 50%;
-  }
-}
 
 .meal-plan {
   display: flex;
@@ -36,13 +20,29 @@
   }
 }
 
+.meal-plan__wrapper {
+  padding: 30px 40px 22px;
+
+  @media (min-width: $table-width) {
+    position: relative;
+    padding: 77px 61px 61px 52px;
+    margin: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    margin: 0;
+    padding: 77px 61px 63px 52px;
+    width: 50%;
+  }
+}
+
 .meal-plan__loss {
   display: flex;
   flex-direction: column;
   background-color: $card-color;
   text-align: center;
   margin: 0;
-  padding: 0;
 
   @media (min-width: $table-width) {
     &::after {
@@ -84,12 +84,11 @@
   background-color: $card-color;
   text-align: center;
   margin: 0;
-  padding: 0;
 
   @media (min-width: $table-width) {
     &::after {
       content: "";
-      background-image: url("../../img/meal-plan/cat-pro-tablet.png");
+      background-image: url("../img/meal-plan/cat-pro-tablet.png");
       background-repeat: no-repeat;
       width: 268px;
       height: 200px;

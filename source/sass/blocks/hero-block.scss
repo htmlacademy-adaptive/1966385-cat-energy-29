@@ -12,11 +12,17 @@
     width: 100%;
     left: 50%;
     transform: translateX(-50%);
-    background-image: url("../../img/hero-block/index-background-mobile\ 2.png");
+    background-image: url("../img/hero-block/index-background-desktop-2.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     z-index: -2;
+
+    @media (min-resolution: 2dppx) {
+      content: "";
+      background-image: url("../img/hero-block/index-background-desktop-2@2x.jpg");
+      background-size: contain;
+    }
   }
 
   &::after {

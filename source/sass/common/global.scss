@@ -4,6 +4,10 @@
   margin: 0 auto;
   background-color: $standard-white;
   min-width: 320px;
+
+  @media (min-width: $desktop-width) {
+    max-width: 1440px;
+  }
 }
 
 .page__body--no-js .visually-hidden {
