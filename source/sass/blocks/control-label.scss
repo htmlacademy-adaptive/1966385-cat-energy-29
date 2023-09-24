@@ -1,0 +1,19 @@
+.control-label {
+  color: $nero-color;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  @media (min-width: $table-width) {
+    font-size: 20px;
+    color: $charcoal-color;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: normal;
+  }
+}

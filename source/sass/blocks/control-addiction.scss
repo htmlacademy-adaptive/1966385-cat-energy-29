@@ -1,0 +1,9 @@
+.control-addiction {
+  @media (min-width: $desktop-width) {
+    padding-left: 60px;
+  }
+}
+
+.control-addiction:focus-within .control-mark-ckeckbox {
+  outline: 2px solid $radio-outline;
+}

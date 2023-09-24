@@ -2,23 +2,20 @@
 @import "./common/global";
 @import "./blocks/hero-block";
 @import "./blocks/meal-plan";
-@import "./blocks/meal-works";
+@import "./blocks/meal-work";
 @import "./blocks/site-list";
-@import "./blocks/main-nav.scss";
-
-// Fonts
-@import "./common/fonts";
-
-// Wrappers
-@import "./common/wrapper";
+@import "./blocks/main-nav";
 @import "./blocks/example";
 @import "./blocks/cooperate";
 @import "./blocks/main-footer";
 @import "./blocks/main-form";
 
+// Fonts
+@import "./common/fonts";
+
 // Inputs
 @import "./common/inputs";
-@import "./common/control.scss";
+
 
 /*Catalog*/
 @import "./blocks/catalog-productions";
@@ -29,3 +26,9 @@
 
 // Media
 @import "./common/variables";
+
+//Controls
+@import "./blocks/control-mark";
+@import "./blocks/control";
+@import "./blocks/control-addiction";
+@import "./blocks/control-label";

@@ -1,6 +1,7 @@
 @import "./../common/color";
 @import "../common/variables";
 
+//With JS
 .main-header {
   display: flex;
   position: relative;
@@ -10,13 +11,31 @@
   background-color: $standard-white;
   align-items: center;
 
+  &--nojs {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0;
+
+    @media (min-width: $table-width) {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 24px 34px 30px 30px;
+      position: relative;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 55px 110px;
+    }
+  }
+
   @media (min-width: $table-width) {
     display: flex;
-    padding: 19px 34px 25px 30px;
+    padding: 19px 34px 26px 30px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 55px 110px;
+    padding: 54px 110px;
   }
 }
 
@@ -32,14 +51,14 @@
       width: 50%;
       height: 694px;
       top: 0;
-      background-image: url("../../img/hero-block/index-background-desktop\ 1.png");
+      background-image: url("../img/hero-block/index-background-desktop-1.jpg");
       background-repeat: no-repeat;
       z-index: 1;
       background-size: cover;
 
       @media (min-resolution: 2dppx) {
         content: "";
-        background-image: url("../../img/hero-block/index-background-desktop\ 1@2x.png");
+        background-image: url("../img/hero-block/index-background-desktop-1@2x.png");
         background-size: cover;
       }
     }
@@ -64,7 +83,7 @@
   }
 
   &::after {
-    border-bottom: 1px solid #d9d9d9;
+    border-bottom: 1px solid $gainsboro-color;
     position: absolute;
     display: block;
     flex-grow: 1;
@@ -86,6 +105,34 @@
   display: flex;
   flex-direction: row;
   color: $standard-black;
+}
+
+.main-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__nojs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px 11px 20px;
+    position: relative;
+    min-width: 280px;
+  }
+
+  @media (min-width: $table-width) {
+    padding: 0;
+    position: initial;
+
+    &__nojs {
+      min-width: 267px;
+    }
+  }
+
+  @media (min-width: $table-width) {
+    width: auto;
+  }
 }
 
 .main-header__logo-image {
@@ -116,8 +163,9 @@
 
   @media (min-width: $table-width) {
     display: flex;
-    position: relative;
-    left: 39%;
+    position: absolute;
+    left: 153px;
+    top: 50px;
   }
 
   &:hover {
@@ -131,5 +179,50 @@
   @media (min-width: $desktop-width) {
     width: 118px;
     height: 23px;
+    left: 252px;
+    top: 84px;
   }
 }
+
+.main-header__toggle {
+  background-image: url("../img/header/Header-nav-close.svg");
+  background-repeat: no-repeat;
+  border: none;
+  width: 25px;
+  height: 24px;
+  background-color: $standard-white;
+  cursor: pointer;
+
+  &--open {
+    background-image: url("../img/header/header-nav-close.svg");
+  }
+
+  &--nojs {
+    display: none;
+  }
+
+  @media (min-width: $table-width) {
+    display: none;
+    cursor: default;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+//CSS Menu
+// .main-header__toggle:focus,
+// .main-header__toggle:active {
+//   background-image: url("../img/header/header-nav-close.svg");
+// }
+
+
+// .main-header__toggle:active~.site-list--hidden,
+// .main-header__toggle:focus~.site-list--hidden {
+//   display: block;
+// }
