@@ -12,6 +12,7 @@
 
   @media (min-width: $table-width) {
     display: flex;
+    margin-top: 14px;
 
     &--nojs {
       max-width: 480px;
@@ -25,6 +26,7 @@
   @media (min-width: $desktop-width) {
     background-color: transparent;
     z-index: 3;
+    margin-top: 19px;
 
     &--nojs {
       max-width: 479px;

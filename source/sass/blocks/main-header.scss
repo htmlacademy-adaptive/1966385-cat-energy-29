@@ -31,11 +31,12 @@
 
   @media (min-width: $table-width) {
     display: flex;
-    padding: 19px 34px 26px 30px;
+    padding: 25px 34px 19px 30px;
+    align-items: flex-start;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 54px 110px;
+    padding: 55px 110px;
   }
 }
 
