@@ -15,11 +15,11 @@
     display: inline-flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 4px;
+    row-gap: 2px;
   }
 
   @media (min-width: $desktop-width) {
-    margin: 29px 0 20px;
+    margin: 32px 0 20px;
   }
 }
 
@@ -48,7 +48,7 @@
     font-size: 60px;
     line-height: 60px;
     text-align: left;
-    padding: 33px 41px 16px 30px;
+    padding: 32px 41px 16px 30px;
     margin-bottom: 49px;
   }
 
@@ -66,14 +66,14 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(324px, 1fr));
     column-gap: 40px;
-    row-gap: 42px;
+    row-gap: 41px;
   }
 
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
     column-gap: 80px;
-    row-gap: 45px;
+    row-gap: 44px;
     margin: 0;
     padding: 0;
   }
@@ -128,7 +128,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 16px 38px 43px;
+    padding: 17px 38px 40px;
     margin: 0;
   }
 }
@@ -146,7 +146,7 @@
     margin: 103px 12px 0 11px;
     align-items: center;
     justify-content: flex-start;
-    padding: 50px 35px 0;
+    padding: 48px 35px 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -243,11 +243,16 @@
 .catalog-production__info {
   display: flex;
   flex-direction: column;
-  gap: 9px;
+  row-gap: 9px;
   width: 50%;
 
   @media (min-width: $table-width) {
     width: 100%;
+    row-gap: 12px;
+  }
+
+  @media (min-width: $desktop-width) {
+    row-gap: 15px;
   }
 }
 
@@ -279,7 +284,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 30px 5px 12px;
+    margin: 29px 7px 5px;
   }
 }
 
@@ -287,11 +292,11 @@
   margin: 24px 0 0;
 
   @media (min-width: $table-width) {
-    margin: 48px 40px 15px;
+    margin: 50px 40px 15px;
   }
 
   @media (min-width: $desktop-width) {
-    margin: 41px 0 16px;
+    margin: 42px 0 16px;
   }
 }
 
@@ -307,10 +312,10 @@
   @media (min-width: $table-width) {
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
+    row-gap: 9px;
     font-size: 16px;
     line-height: 20px;
-    margin-bottom: 18px;
+    margin-bottom: 19px;
   }
 }
 
@@ -327,7 +332,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    min-width: 169px;
+    min-width: 168px;
   }
 }
 
@@ -363,7 +368,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 9px auto 93px;
+    margin: 9px auto 91px;
   }
 }
 
@@ -386,7 +391,7 @@
   min-height: 20px;
 
   @media (min-width: $desktop-width) {
-    padding: 8px 26px;
+    padding: 10px 26px;
     height: auto;
 
     &:hover {

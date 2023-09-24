@@ -45,7 +45,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 10px 28px 10px 20px;
+    padding: 10px 28px 10px 21px;
     margin: 0;
   }
 }
@@ -84,17 +84,25 @@ input[type="checkbox"]:checked~.control-mark-ckeckbox::before {
 }
 
 .input:focus-visible+.main-form__program-owner-email {
-  background-color: $base-color;
+  @media (min-width: $table-width) {
+    background-color: $base-color;
+  }
 }
 
 .input:invalid+.main-form__program-owner-email {
-  background-color: $error-color;
+  @media (min-width: $table-width) {
+    background-color: $error-color;
+  }
 }
 
 .input:focus-visible+.main-form__program-owner-phone {
-  background-color: $base-color;
+  @media (min-width: $table-width) {
+    background-color: $base-color;
+  }
 }
 
 .input:invalid+.main-form__program-owner-phone {
-  background-color: $error-color;
+  @media (min-width: $table-width) {
+    background-color: $error-color;
+  }
 }

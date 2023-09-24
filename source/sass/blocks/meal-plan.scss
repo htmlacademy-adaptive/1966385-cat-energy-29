@@ -16,7 +16,7 @@
     column-gap: 80px;
     display: flex;
     flex-direction: row;
-    margin: 22px 110px 0;
+    margin: 21px 110px 0;
   }
 }
 
@@ -42,7 +42,6 @@
   flex-direction: column;
   background-color: $card-color;
   text-align: center;
-  margin: 0;
 
   @media (min-width: $table-width) {
     &::after {
@@ -69,7 +68,7 @@
       width: 134px;
       height: 106px;
       left: 52px;
-      top: 42px;
+      top: 41px;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/meal-plan/cat-slim-desktop@2x.png");
@@ -83,7 +82,6 @@
   flex-direction: column;
   background-color: $card-color;
   text-align: center;
-  margin: 0;
 
   @media (min-width: $table-width) {
     &::after {
@@ -109,7 +107,7 @@
       width: 134px;
       height: 110px;
       left: 33px;
-      top: 48px;
+      top: 47px;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/meal-plan/cat-pro-desktop@2x.png");
@@ -170,7 +168,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 37px;
-  margin: 0 auto 30px 70px;
+  margin: 0 auto 30px 71px;
   text-transform: uppercase;
 
   &::before {
@@ -180,7 +178,7 @@
     background-repeat: no-repeat;
     width: 67px;
     height: 50px;
-    left: -77px;
+    left: -78px;
     top: -6px;
 
     @media (min-resolution: 2dppx) {
@@ -201,7 +199,7 @@
 
   @media (min-width: $desktop-width) {
     text-align: center;
-    margin: 1px auto 61px 162px;
+    margin: 0 auto 61px 162px;
   }
 }
 
@@ -243,7 +241,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 auto 20px 0;
+    margin: 0 auto 21px 0;
 
     &::before {
       display: none;
@@ -272,11 +270,10 @@
     mask-image: url("../img/meal-plan/arrow-right.svg");
     mask-repeat: no-repeat;
     background-color: $standard-black;
-    bottom: 50%;
     top: 50%;
-    left: 114px;
+    left: 100px;
     height: 14px;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
     width: 32px;
   }
 
@@ -286,7 +283,7 @@
     margin-top: 10px;
 
     &::before {
-      left: 149px;
+      left: 131px;
     }
 
     &:hover::before {

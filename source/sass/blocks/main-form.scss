@@ -8,7 +8,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    row-gap: 26px;
+    row-gap: 27px;
   }
 }
 
@@ -222,7 +222,7 @@
 
     &::before {
       width: calc(100% + 90px);
-      top: -92px;
+      top: -93px;
       left: -50px;
       transform: none;
     }
@@ -369,7 +369,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 71px 20px 34px 0;
+    margin: 71px 20px 35px 0;
 
     &::before {
       width: calc(100% + 240px);
@@ -576,7 +576,7 @@
   content: "";
   position: absolute;
   top: 50%;
-  left: calc(100% - 32px);
+  left: calc(100% - 33px);
   width: 20px;
   height: 20px;
   transform: translateY(-50%);
@@ -623,11 +623,18 @@
     width: 90%;
     text-align: start;
     padding: 11px 1px 27px 19px;
+
+    &:focus,
+    :focus-visible,
+    :active {
+      outline: 2px solid $charcoal-color;
+      outline-color: $charcoal-color;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 0 0 15px;
-    padding: 9px 101px 29px 20px;
+    margin: 0 0 0 16px;
+    padding: 9px 101px 29px 19px;
   }
 }
 

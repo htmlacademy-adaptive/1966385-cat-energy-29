@@ -26,9 +26,9 @@
 
   @media (min-width: $table-width) {
     flex-direction: column;
-    justify-content: center;
-    margin-top: -15px;
-    column-gap: 5px;
+    justify-content: flex-start;
+    margin-top: 7px;
+    row-gap: 5px;
   }
 
   @media (min-width: $desktop-width) {
@@ -191,7 +191,7 @@
     font-size: 14px;
     line-height: 14px;
     background-color: $standard-white;
-    top: -8px;
+    top: -6px;
     min-width: 125px;
     width: auto;
   }

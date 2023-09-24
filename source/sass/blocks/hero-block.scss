@@ -10,6 +10,7 @@
     position: absolute;
     height: 302px;
     width: 100%;
+    top: 2px;
     left: 50%;
     transform: translateX(-50%);
     background-image: url("../img/hero-block/index-background-desktop-2.jpg");
@@ -28,9 +29,9 @@
   &::after {
     content: "";
     position: absolute;
-    top: 0;
+    top: 2px;
     width: 100%;
-    height: 304px;
+    height: 302px;
     z-index: -1;
     background-color: $apple-color;
     margin-left: calc((100vw / 2 - 100% / 2) * -1);
@@ -39,9 +40,24 @@
 
   @media (min-width: $table-width) {
     margin: 0;
+    min-height: 842px;
 
     &::before {
-      display: none;
+      content: "";
+      position: absolute;
+      display: flex;
+      top: 233px;
+      width: 709px;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 609px;
+      background-image: url("../img/index/index-can-tablet@1x.png");
+      background-size: cover;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index/index-can-tablet@2x.png");
+        background-size: cover;
+      }
     }
 
     &::after {
@@ -51,9 +67,13 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
-    min-height: 580px;
+    min-height: 582px;
     flex-direction: column;
     align-items: start;
+
+    &::before {
+      display: none;
+    }
   }
 }
 
@@ -80,7 +100,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 53px auto 40px 190px;
+    margin: 51px auto 40px 190px;
   }
 }
 
@@ -102,7 +122,7 @@
     position: relative;
     font-size: 20px;
     line-height: 20px;
-    background-color: $standard-white;
+    background-color: transparent;
   }
 
   @media (min-width: $desktop-width) {
@@ -127,15 +147,14 @@
   text-transform: uppercase;
   align-items: center;
   justify-content: center;
-  max-width: 416px;
+  max-width: 300px;
 
   @media (min-width: $table-width) {
-    position: absolute;
-    top: 263px;
-    left: 120px;
+    position: relative;
     padding: 14px 26px;
     font-size: 20px;
     line-height: 26px;
+    margin: 28px 302px 20px 17px;
 
     &:hover {
       background-color: $hover-button;
@@ -150,7 +169,7 @@
   @media (min-width: $desktop-width) {
     z-index: 3;
     position: initial;
-    margin: 29px auto 0 190px;
+    margin: 31px auto 0 190px;
   }
 }
 
@@ -158,11 +177,11 @@
   z-index: 1;
 
   @media (min-width: $table-width) {
-    width: 100%;
-    height: 605px;
+    display: none;
   }
 
   @media (min-width: $desktop-width) {
+    display: flex;
     position: absolute;
     top: -29px;
     right: 247px;

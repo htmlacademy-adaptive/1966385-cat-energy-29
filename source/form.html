@@ -17,9 +17,8 @@
 </head>
 
 <body class="page-body">
-
-  <header class="main-header main-header--hero-bg main-header--no-background">
-    <div class="wrapper">
+  <header class="main-header main-header--nojs main-header--no-background">
+    <div class="main-header__wrapper main-header__wrapper__nojs">
       <a href="index.html" class="main-header__logo">
         <picture>
           <source media="(min-width: 1440px)" srcset="./img/header/logo-pic-desctop.svg">
@@ -31,12 +30,12 @@
           <use xlink:href="img/sprite.svg#logo-text"></use>
         </svg>
       </a>
-    </div>
-    <nav class="main-nav">
-      <button onclick="myFunction()" class="main-nav__toggle" type="button">
+      <button class="main-header__toggle main-header__toggle--nojs" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
-      <ul class="main-nav__list site-list site-list--hidden">
+    </div>
+    <nav class="main-nav">
+      <ul class="main-nav__list site-list site-list--nojs">
         <li class="site-list__item">
           <a class="site-list__link site-list__link-index site-list__link-catalog" href="index.html">
             Главная
@@ -48,8 +47,7 @@
           </a>
         </li>
         <li class="site-list__item">
-          <a class="site-list__link site-list__link-index site-list__link-catalog site-list__link--current"
-            href="form.html">
+          <a class="site-list__link site-list__link-index site-list__link-catalog site-list__link--current" href="#">
             Подбор программы
           </a>
         </li>
@@ -169,18 +167,32 @@
       <div class="cooperate__text">
         <h2 class="visually-hidden">Сотрудничество</h2>
         <div class="cooperate__wrapper cooperate__wrapper-catalog">
-          <p class="cooperate__text">приглашаем<br> к сотрудничеству дилеров!</p>
+          <p class="cooperate__text-title">приглашаем<br> к сотрудничеству дилеров!</p>
           <address class="cooperate__description">ул. Большая Конюшенная, д. 19/8
             <span class="cooperate__description-address"> Санкт-Петербург</span>
           </address>
         </div>
       </div>
-      <iframe class="cooperate__map" title="место нахождение магазина"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d428.3238550643958!2d30.322318544068956!3d59.938632599302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sby!4v1693143483181!5m2!1sru!2sby"
-        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-
-      </iframe>
+      <div class="cooperate__widget">
+        <iframe class="cooperate__map" title="место нахождения магазина"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d428.3238550643958!2d30.322318544068956!3d59.938632599302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sby!4v1693143483181!5m2!1sru!2sby"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <div class="cooperate__map-fallback">
+          <picture>
+            <source type="image/webp" media="(min-width: 1200px)"
+              srcset="./img/map/map-desktop.webp 1x, ./img/map/map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="./img/map/map-table.webp 1x, ./img/map/map-table@2x.webp 2x">
+            <source type="image/webp" srcset="./img/map/map-mobile.webp 1x, ./img/map/map-mobile@2x.webp 2x">
+            <source media="(min-width: 1200px)" srcset="./img/map/map-desktop.png 1x, ./img/map/map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="./img/map/map-table.png 1x, ./img/map/map-table@2x.png 2x">
+            <img src="./img/map/map-mobile.png" srcset="./img/map/map-mobile@2x.png 2x"
+              alt="Место расположение магазина" width="320" height="362">
+          </picture>
+        </div>
+      </div>
     </section>
   </main>
   <footer class="main-footer">
@@ -222,7 +234,7 @@
       </div>
       <div class="main-footer__academy">
         <a class="main-footer__academy-link" href="#">
-          HTML-Academy
+          HTML Academy
           <svg class="main-footer__academy-logo" width="28" height="34" viewBox="0 0 28 34">
             <use xlink:href="img/sprite.svg#htmlacademy"></use>
           </svg>

@@ -14,7 +14,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 21px;
+    margin-bottom: 19px;
   }
 
   @media (min-width: $desktop-width) {
@@ -30,6 +30,15 @@
   flex-direction: column;
   padding: 25px 20px;
 
+  &::before {
+    position: absolute;
+    content: "";
+    border-bottom: 2px solid $apple-color;
+    width: 100%;
+    left: 0;
+    top: 64px;
+  }
+
   @media (min-width: $table-width) {
     padding: 0 30px;
 
@@ -37,7 +46,7 @@
       content: "";
       position: absolute;
       width: 100%;
-      top: 93px;
+      top: 95px;
       right: -30px;
       border-bottom: 2px solid $apple-color;
       left: 50%;
@@ -46,10 +55,10 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 110px;
+    padding: 0 111px;
 
     &::before {
-      top: 98px;
+      top: 96px;
     }
   }
 }
@@ -72,25 +81,17 @@
   font-display: swap;
   font-weight: 400;
   line-height: 24px;
-  margin: 24px 0 49px;
+  margin: 24px -20px 49px;
   text-align: start;
   z-index: 2;
-
-  &::after {
-    border-bottom: 1px solid $special-grey;
-    position: absolute;
-    display: block;
-    flex-grow: 1;
-    content: "";
-    height: 1px;
-    width: 100%;
-    bottom: -36px;
-  }
+  background-color: $standard-white;
+  padding: 0 0 0 20px;
+  max-width: 246px;
 
   @media (min-width: $table-width) {
     font-size: 36px;
     line-height: 36px;
-    margin: 71px 0 81px;
+    margin: 74px 0 80px;
     padding-left: 40px;
     background-color: $standard-white;
     max-width: 378px;
@@ -101,7 +102,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 75px 0 79px -40px;
+    margin: 73px 0 79px -41px;
     font-size: 36px;
     line-height: 36px;
   }
@@ -122,18 +123,33 @@
     bottom: 14px;
   }
 
+  &:first-child::before {
+    border-bottom: 1px solid $special-grey;
+    position: absolute;
+    display: block;
+    flex-grow: 1;
+    content: "";
+    height: 1px;
+    width: 100%;
+    top: -15px;
+  }
+
   @media (min-width: $table-width) {
     border: 1px solid $special-grey;
-    padding: 23px 38px 27px;
+    padding: 23px 37px 27px;
     min-height: auto;
 
     &::after {
       display: none;
     }
+
+    &:first-child::before {
+      display: none;
+    }
   }
 
   @media (min-width: $desktop-width) {
-    padding: 17px 0 15px;
+    padding: 16px 0;
     display: flex;
     justify-content: space-between;
     outline: none;
@@ -218,10 +234,12 @@
     font-style: normal;
     font-weight: 400;
     line-height: 20px;
+    margin-top: 2px;
   }
 
   @media (min-width: $desktop-width) {
     min-width: 323px;
+    margin-top: 4px;
   }
 }
 
@@ -291,7 +309,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     padding: 0 122px 0 420px;
-    margin: 69px 0 75px;
+    margin: 70px 0 75px;
     justify-content: flex-end;
 
     &::after {
