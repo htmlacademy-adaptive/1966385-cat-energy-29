@@ -12,6 +12,7 @@
 
   @media (min-width: $table-width) {
     display: flex;
+    margin-top: 14px;
 
     &--nojs {
       max-width: 480px;
