@@ -26,6 +26,7 @@
   @media (min-width: $desktop-width) {
     background-color: transparent;
     z-index: 3;
+    margin-top: 19px;
 
     &--nojs {
       max-width: 479px;
